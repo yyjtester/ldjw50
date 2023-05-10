@@ -1,0 +1,15 @@
+trigger:
+- master
+
+pool:
+  name: 'fyp-pool'
+
+steps:
+- script: echo Hello World!
+  displayName: 'Run a one-liner script'
+
+- script: |
+    echo This codespace hostname:
+    echo ------------------------
+    echo $HOSTNAME
+  displayName: 'Run a multi-line script'
