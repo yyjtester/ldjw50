@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
-  name: 'fyp-pool'
+  name: 'fyp_pool'
 
 steps:
 - script: echo Hello World!
