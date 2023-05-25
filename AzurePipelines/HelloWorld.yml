@@ -26,10 +26,6 @@ steps:
     cliProjectName: 'mvc2'
     cliSources: '.'
 - task: SonarCloudAnalyze@1
-
-- script: |
-    curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov
-  displayName: 'Codecov'
   
 - task: SonarCloudPublish@1
   inputs:
