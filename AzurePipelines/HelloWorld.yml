@@ -7,6 +7,8 @@ pool:
 steps:
 - script: echo Hello World!
   displayName: 'Run a one-liner script'
+- checkout: self
+  fetchDepth: 0
 
 - script: |
     echo This codespace hostname:
@@ -15,16 +17,14 @@ steps:
   displayName: 'Run a multi-line script'
 - task: SonarCloudPrepare@1
   inputs:
-    SonarCloud: 'FYP_2.0'
+    SonarCloud: 'SonarCloud'
     organization: 'fyp-sonar-key'
     scannerMode: 'CLI'
     configMode: 'manual'
     cliProjectKey: '21025478_mvc2'
     cliProjectName: 'mvc2'
     cliSources: '.'
-
 - task: SonarCloudAnalyze@1
-
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
