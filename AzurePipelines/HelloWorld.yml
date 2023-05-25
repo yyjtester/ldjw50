@@ -16,9 +16,6 @@ steps:
     echo $HOSTNAME
   displayName: 'Run a multi-line script'
 
-- script: |
-    curl -Os https://uploader.codecov.io/v0.1.0_4653/linux/codecov chmod +x codecov ./codecov -t ${dbb87a58-02a5-4c7d-a16e-7cb887cec075}
-  displayName: 'Codecov'
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
@@ -29,6 +26,11 @@ steps:
     cliProjectName: 'mvc2'
     cliSources: '.'
 - task: SonarCloudAnalyze@1
+
+- script: |
+    curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov
+  displayName: 'Codecov'
+  
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
