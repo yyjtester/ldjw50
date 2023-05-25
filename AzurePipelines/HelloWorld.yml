@@ -18,8 +18,8 @@ steps:
 
 - script: |
     curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov
-  displayName: 'Codecov Code Coverage'
-
+  displayName: 'Codecov'
+- task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
     organization: 'fyp-sonar-key'
