@@ -17,7 +17,7 @@ steps:
   displayName: 'Run a multi-line script'
 
 - script: |
-    curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov -t ${dbb87a58-02a5-4c7d-a16e-7cb887cec075}
+    curl -Os https://uploader.codecov.io/latest/linux/codecov chmod +x codecov ./codecov
   displayName: 'Codecov Code Coverage'
 
   inputs:
