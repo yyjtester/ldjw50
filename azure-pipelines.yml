@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'fyp-pool'
+  vmImage: 'fyp_pool'
 
 variables:
   solution: '**/*.sln'
