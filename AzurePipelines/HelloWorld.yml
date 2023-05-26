@@ -27,13 +27,6 @@ steps:
     cliSources: '.'
 - task: SonarCloudAnalyze@1
 
-- task: Bash@3
-  displayName: 'Run Codecov'
-  inputs:
-    targetType: 'inline'
-    script: |
-      bash <(curl -s https://codecov.io/bash) -t <dbb87a58-02a5-4c7d-a16e-7cb887cec075>
-
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
