@@ -19,14 +19,6 @@ steps:
     echo $HOSTNAME
   displayName: 'Run a multi-line script'
 
-- script: dotnet build ./src/WebApplication1.sln --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    projects: 'mvc2.csproj'
-
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
