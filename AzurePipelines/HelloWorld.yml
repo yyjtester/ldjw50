@@ -4,10 +4,8 @@ trigger:
 pool:
   name: 'fyp_pool'
 
-variables:
-  buildConfiguration: 'Release'
-
 steps:
+
 - script: echo Hello World!
   displayName: 'Run a one-liner script'
 - checkout: self
@@ -33,11 +31,3 @@ steps:
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
-
-- script: dotnet build ./src/WebApplication1.sln --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    projects: 'mvc2.csproj'
