@@ -4,6 +4,9 @@ trigger:
 pool:
   name: 'fyp_pool'
 
+variables:
+  buildConfiguration: 'Release'
+
 steps:
 - script: echo Hello World!
   displayName: 'Run a one-liner script'
