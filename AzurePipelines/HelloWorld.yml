@@ -16,6 +16,13 @@ steps:
     echo $HOSTNAME
   displayName: 'Run a multi-line script'
 
+- task: PowerShell@2
+  displayName: 'Run Codecov'
+  inputs:
+    targetType: 'inline'
+    script: |
+      iex ((new-object net.webclient).DownloadString('https://codecov.io/bash')) -t <dbb87a58-02a5-4c7d-a16e-7cb887cec075>
+
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
