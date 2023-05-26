@@ -37,3 +37,9 @@ steps:
 - task: WhiteSource@21
   inputs:
     cwd: '$(System.DefaultWorkingDirectory)'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker (don''t delete)'
+    repository: 'chloesacil / mvc2'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
