@@ -8,6 +8,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+
 - script: echo Hello World!
   displayName: 'Run a one-liner script'
 - checkout: self
@@ -18,6 +19,19 @@ steps:
     echo ------------------------
     echo $HOSTNAME
   displayName: 'Run a multi-line script'
+
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '2.2.x'
+
+- script: dotnet build ./src/WebApplication1.sln --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: 'mvc2.csproj'
 
 - task: SonarCloudPrepare@1
   inputs:
