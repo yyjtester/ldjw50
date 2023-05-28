@@ -40,9 +40,9 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
 
-- task: WhiteSource@21
-  inputs:
-    cwd: '$(System.DefaultWorkingDirectory)'
+#- task: WhiteSource@21
+#  inputs:
+#    cwd: '$(System.DefaultWorkingDirectory)'
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker (don''t delete)'
