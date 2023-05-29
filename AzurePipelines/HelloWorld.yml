@@ -36,14 +36,6 @@ steps:
     version: 6.x
     performMultiLevelLookup: true
     includePreviewVersions: true # Required for preview versions
-- task: NuGetToolInstaller@1
-  displayName: 'nuget installer'
-
-- task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
-    feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   displayName: 'restore'
