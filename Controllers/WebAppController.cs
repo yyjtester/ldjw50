@@ -12,6 +12,9 @@ namespace myNamespace
 {
     public static class WebAppTest
     {
+
+        public static void Main(string[] args)
+        {}
         [FunctionName("WebAppTest")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
