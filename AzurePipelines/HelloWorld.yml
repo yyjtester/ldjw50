@@ -20,15 +20,6 @@ steps:
     echo $HOSTNAME
   displayName: 'Run a multi-line script'
 
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '2.2.x'
-
-#- task: DotNetCoreCLI@2
-#  inputs:
-#    command: 'test'
-#    projects: 
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
@@ -38,6 +29,28 @@ steps:
     cliProjectKey: '21025478_mvc2'
     cliProjectName: 'mvc2'
     cliSources: '.'
+
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '2.2.x'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '/workspaces/mvc2/fyp_webapp.csproj'
+    feedsToUse: 'select'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '/workspaces/mvc2/fyp_webapp.csproj'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: '/workspaces/mvc2/fyp_webapp.csproj'
+
 - task: SonarCloudAnalyze@1
 
 - task: SonarCloudPublish@1
