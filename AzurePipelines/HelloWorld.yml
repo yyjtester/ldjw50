@@ -41,21 +41,21 @@ steps:
   displayName: 'restore'
   inputs:
     command: 'restore'
-    projects: '/workspaces/mvc2/fyp_webapp.csproj'
+    projects: '/workspaces/mvc2/mvc2.csproj'
     feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   displayName: 'build dotnet'
   inputs:
     command: 'build'
-    projects: '/workspaces/mvc2/fyp_webapp.csproj'
+    projects: '/workspaces/mvc2/mvc2.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: 'test'
   inputs:
     command: 'test'
-    projects: '/workspaces/mvc2/fyp_webapp.csproj'
+    projects: '/workspaces/mvc2/mvc2.csproj'
 
 - task: SonarCloudAnalyze@1
 
