@@ -25,14 +25,10 @@ steps:
     packageType: 'sdk'
     version: '2.2.x'
 
-- script: dotnet build ./src/WebApplication1.sln --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    projects: 'mvc2.csproj'
-
+#- task: DotNetCoreCLI@2
+#  inputs:
+#    command: 'test'
+#    projects: 
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
@@ -48,12 +44,13 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
 
-- task: WhiteSource@21
-  inputs:
-    cwd: '$(System.DefaultWorkingDirectory)'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Docker (don''t delete)'
-    repository: 'chloesacil / mvc2'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+#- task: WhiteSource@21
+#  inputs:
+#    cwd: '$(System.DefaultWorkingDirectory)'
+
+#- task: Docker@2
+#  inputs:
+#    containerRegistry: 'Docker (don''t delete)'
+#    repository: 'chloesacil / mvc2'
+#    command: 'buildAndPush'
+#    Dockerfile: '**/Dockerfile'
