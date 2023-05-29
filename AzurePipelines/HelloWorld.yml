@@ -31,22 +31,27 @@ steps:
     cliSources: '.'
 
 - task: UseDotNet@2
+  displayName: 'Install .NET Core SDK'
   inputs:
-    packageType: 'sdk'
-    version: '2.2.x'
+    version: 6.x
+    performMultiLevelLookup: true
+    includePreviewVersions: true # Required for preview versions
 
 - task: DotNetCoreCLI@2
+  displayName: 'restore'
   inputs:
     command: 'restore'
     projects: '/workspaces/mvc2/fyp_webapp.csproj'
     feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
+  displayName: 'build dotnet'
   inputs:
     command: 'build'
     projects: '/workspaces/mvc2/fyp_webapp.csproj'
 
 - task: DotNetCoreCLI@2
+  displayName: 'test'
   inputs:
     command: 'test'
     projects: '/workspaces/mvc2/fyp_webapp.csproj'
