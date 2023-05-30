@@ -71,6 +71,17 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
 
+- task: DownloadPipelineArtifact@2
+  inputs:
+    buildType: 'current'
+    artifactName: 'drop'
+    targetPath: '$(Pipeline.Workspace)/drop'
+
+#- task: PublishCodeCoverageResults@1
+#  displayName: 'Publish code coverage'
+#  inputs:
+    
+
 #- task: WhiteSource@21
 #  inputs:
 #    cwd: '$(System.DefaultWorkingDirectory)'
