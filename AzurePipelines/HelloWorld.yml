@@ -63,6 +63,7 @@ steps:
   inputs:
     command: 'test'
     projects: '/workspaces/mvc2/mvc2.csproj'
+    arguments: '--collect "Code Coverage"'
 
 - task: SonarCloudAnalyze@1
 
