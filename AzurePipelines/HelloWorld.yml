@@ -75,10 +75,10 @@ steps:
     artifactName: 'drop'
     targetPath: '$(Pipeline.Workspace)/drop'
 
-#- task: PublishCodeCoverageResults@1
-#  displayName: 'Publish code coverage'
-#  inputs:
-    
+- task: WhiteSource@21
+  displayName: 'Run Mend Bolt'
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
 
 #- task: WhiteSource@21
 #  inputs:
