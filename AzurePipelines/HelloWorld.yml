@@ -27,8 +27,6 @@ steps:
     scannerMode: 'CLI'
     configMode: 'manual'
     cliProjectKey: '21025478_mvc2'
-    cliProjectName: '
-
 
 - task: UseDotNet@2
   displayName: 'Install .NET Core SDK'
