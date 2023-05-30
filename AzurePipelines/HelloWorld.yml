@@ -51,6 +51,13 @@ steps:
     projects: '/workspaces/mvc2/mvc2.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
+- task: PublishPipelineArtifact@1
+  displayName: 'publish'
+  inputs:
+    targetPath: $(build.artifactStagingDirectory)
+    artifact: 'drop'
+    publishLocation: 'pipeline'
+
 - task: DotNetCoreCLI@2
   displayName: 'test'
   inputs:
