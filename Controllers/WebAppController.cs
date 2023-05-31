@@ -35,7 +35,6 @@ namespace myNamespace
         };
 
         var result = await SomeAsyncOperation();
-        return new OkObjectResult($"Result: {result}");
 
         }
     private static async Task<string> SomeAsyncOperation()
