@@ -34,6 +34,19 @@ namespace myNamespace
             StatusCode = 200
         };
 
+        var result = await SomeAsyncOperation();
+        return new OkObjectResult($"Result: {result}");
+
         }
+    private static async Task<string> SomeAsyncOperation()
+    {
+        // Perform your asynchronous logic here
+        await Task.Delay(1000); // Example delay of 1 second
+
+        return "Async operation completed";
     }
+        
+    }
+
+    
 }
