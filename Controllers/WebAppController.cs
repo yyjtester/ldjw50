@@ -14,15 +14,15 @@ namespace myNamespace
     {
 
         public static void Main(string[] args)
-        {}
+        {
+            // included to keep errors away
+        }
         [FunctionName("WebAppTest")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
-
-        // string responseMessage = "<html><body><h1>Hello World</html></body></h1>";
 
         string htmlFilePath = "/workspaces/mvc2/Views/WebAppPage.html";
         string htmlContent = File.ReadAllText(htmlFilePath);
