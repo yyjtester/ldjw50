@@ -36,29 +36,29 @@ namespace myNamespace
             StatusCode = 200
         };
 
-        int result = await Task.Run(PerformCPUIntensiveTask);
+        // Start the asynchronous operation
+        Task<int> task = PerformAsyncOperation();
+
+        // Other code to execute while the asynchronous operation is in progress
+        Console.WriteLine("Other work on the main thread.");
+
+        // Await the completion of the asynchronous operation
+        int result = await task;
 
         // Display the result
-        Console.WriteLine("CPU-bound task completed. Result: " + result);
+        Console.WriteLine("Async operation completed. Result: " + result);
 
-        // Other code to execute after the CPU-bound task completes
-        Console.WriteLine("Main thread is continuing to execute.");
-
-        // Wait for user input to exit the program
-        Console.ReadLine();
+        Console.WriteLine("Main thread finished.");
 
         }
         
-        public static int PerformCPUIntensiveTask()
+    public static async Task<int> PerformAsyncOperation()
     {
-        // Simulate a CPU-bound task by performing a large calculation
-        int result = 0;
-        for (int i = 0; i < 100000000; i++)
-        {
-            result += i;
-        }
+        // Simulate some asynchronous work
+        await Task.Delay(2000); // Delay for 2 seconds
 
-        return result;
+        // Return a result
+        return 42;
     }
     }
 
