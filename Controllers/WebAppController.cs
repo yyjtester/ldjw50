@@ -27,6 +27,8 @@ namespace myNamespace
         string htmlFilePath = "/workspaces/mvc2/Views/WebAppPage.html";
         string htmlContent = File.ReadAllText(htmlFilePath);
 
+        
+
         return new ContentResult
         {
             Content = htmlContent,
@@ -34,8 +36,30 @@ namespace myNamespace
             StatusCode = 200
         };
 
+        int result = await Task.Run(PerformCPUIntensiveTask);
+
+        // Display the result
+        Console.WriteLine("CPU-bound task completed. Result: " + result);
+
+        // Other code to execute after the CPU-bound task completes
+        Console.WriteLine("Main thread is continuing to execute.");
+
+        // Wait for user input to exit the program
+        Console.ReadLine();
+
         }
         
+        public static int PerformCPUIntensiveTask()
+    {
+        // Simulate a CPU-bound task by performing a large calculation
+        int result = 0;
+        for (int i = 0; i < 100000000; i++)
+        {
+            result += i;
+        }
+
+        return result;
+    }
     }
 
     
