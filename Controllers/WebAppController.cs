@@ -25,9 +25,7 @@ namespace myNamespace
             log.LogInformation("C# HTTP trigger function processed a request.");
 
         string htmlFilePath = "/workspaces/mvc2/Views/WebAppPage.html";
-        string htmlContent = File.ReadAllText(htmlFilePath);
-
-        
+        string htmlContent = File.ReadAllText(htmlFilePath);      
 
         return new ContentResult
         {
@@ -36,31 +34,8 @@ namespace myNamespace
             StatusCode = 200
         };
 
-        // Start the asynchronous operation
-        Task<int> task = PerformAsyncOperation();
-
-        // Other code to execute while the asynchronous operation is in progress
-        Console.WriteLine("Other work on the main thread.");
-
-        // Await the completion of the asynchronous operation
-        int result = await task;
-
-        // Display the result
-        Console.WriteLine("Async operation completed. Result: " + result);
-
-        Console.WriteLine("Main thread finished.");
-
         }
-        
-    public static async Task<int> PerformAsyncOperation()
-    {
-        // Simulate some asynchronous work
-        await Task.Delay(2000); // Delay for 2 seconds
 
-        // Return a result
-        return 42;
-    }
     }
 
-    
 }
