@@ -34,7 +34,7 @@ namespace myNamespace
             StatusCode = 200
         };
 
-        var result = await SomeAsyncOperation();
+        await Run().ConfigureAwait(false);
 
         }
         
