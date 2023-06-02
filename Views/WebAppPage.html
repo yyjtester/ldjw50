@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <title>Web App Test</title>
+    <script>
+        function updateCurrentTime() {
+            var currentTimeElement = document.getElementById('currentTime');
+            currentTimeElement.innerText = '<%= GetCurrentTime() %>';
+        }
+        setInterval(updateCurrentTime, 1000);
+    </script>
 </head>
 <body>
-    <h1>Web App Test | Hello World</h1>
-    
+    <h1>Current Time:</h1>
+    <p id="currentTime"></p>
 </body>
 </html>
