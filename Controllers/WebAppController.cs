@@ -36,11 +36,6 @@ namespace myNamespace
 
         }
 
-        public string GetCurrentTime()
-        {
-        return DateTime.Now.ToString("HH:mm:ss");
-        }
-
     }
 
 }

@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8" />
     <title>Web App Test</title>
-    <script>
-        function updateCurrentTime() {
-            var currentTimeElement = document.getElementById('currentTime');
-            currentTimeElement.innerText = '<%= GetCurrentTime() %>';
-        }
-        setInterval(updateCurrentTime, 1000);
-    </script>
 </head>
 <body>
-    <h1>Current Time:</h1>
-    <p id="currentTime"></p>
+    
+    <div>
+        <h1 id="current-time"></h1>
+    </div>
+
 </body>
+
+<script>
+    let time = document.getElementById("current-time");
+
+    setInterval(() => {
+        let d = new Date();
+        time.innerHTML = d.toLocaleTimeString();
+    }, 1000);
+</script>
+
 </html>
