@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace myNamespace
 {
-    public static class WebAppTest
+    public class WebAppTest
     {
 
         public static void Main(string[] args)
