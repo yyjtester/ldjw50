@@ -27,14 +27,14 @@ namespace myNamespace
         string htmlFilePath = "/workspaces/mvc2/Views/WebAppPage.html";
         string htmlContent = File.ReadAllText(htmlFilePath);      
 
+        await Task.Delay(1000);
+
         return new ContentResult
         {
             Content = htmlContent,
             ContentType = "text/html",
             StatusCode = 200
         };
-
-        await Task.Run();
 
         }
 
