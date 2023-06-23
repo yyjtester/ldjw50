@@ -39,14 +39,14 @@ steps:
   displayName: 'restore'
   inputs:
     command: 'restore'
-    projects: '/workspaces/mvc2/mvc2.csproj'
+    projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
     feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   displayName: 'build dotnet'
   inputs:
     command: 'build'
-    projects: '/workspaces/mvc2/mvc2.csproj'
+    projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: PublishPipelineArtifact@1
@@ -60,7 +60,7 @@ steps:
   displayName: 'test'
   inputs:
     command: 'test'
-    projects: '/workspaces/mvc2/mvc2.csproj'
+    projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
     arguments: '--collect "Code Coverage"'
 
 - task: SonarCloudAnalyze@1
