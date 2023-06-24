@@ -1,0 +1,228 @@
+.landing-page,
+.landing-page * {
+  box-sizing: border-box;
+}
+.landing-page {
+  background: #ffffff;
+  width: 1440px;
+  height: 3825px;
+  position: relative;
+  overflow: hidden;
+}
+.thin-outline {
+  border-radius: 74px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
+  width: 485px;
+  height: 538px;
+  position: absolute;
+  left: calc(50% - -598px);
+  top: calc(50% - 1105.5px);
+  box-shadow: inset 0px 20px 31px 0px rgba(140, 82, 255, 0.62);
+  transform-origin: 0 0;
+  transform: rotate(180deg) scale(1, 1);
+}
+.group-1 {
+  position: absolute;
+  inset: 0;
+}
+.learn-more-button {
+  width: 173.08px;
+  height: 53.91px;
+  position: static;
+}
+.button {
+  background: #8c52ff;
+  border-radius: 74px;
+  width: 173.08px;
+  height: 53.91px;
+  position: absolute;
+  left: calc(50% - 404.92px);
+  top: calc(50% - 1178.59px);
+  box-shadow: inset 0px 20px 31px 0px rgba(140, 82, 255, 0.62);
+  transform-origin: 0 0;
+  transform: rotate(180deg) scale(1, 1);
+}
+.learn-more {
+  color: #ffffff;
+  text-align: center;
+  font: 300 24px/35px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - 561.57px);
+  top: calc(50% - 1221.72px);
+  width: 140.21px;
+  height: 31.45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.giving-you-great-aid {
+  text-align: left;
+  font: 700 65px/20px "Inter", sans-serif;
+  position: absolute;
+  left: 139px;
+  top: calc(50% - 1569.5px);
+  width: 727px;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.giving-you-great-aid-span {
+  color: #000000;
+  font: 700 65px/20px "Inter", sans-serif;
+}
+.giving-you-great-aid-span2 {
+  color: #17c470;
+  font: 700 65px/20px "Inter", sans-serif;
+}
+.a-centralized-safe-space-to-bridge-the-gap-between-surplus-food-resources-and-those-in-need-be-part-of-the-community {
+  color: #000000;
+  text-align: left;
+  font: 300 30px/35px "Inter", sans-serif;
+  position: absolute;
+  left: 139px;
+  top: calc(50% - 1462.5px);
+  width: 681px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rectangle-7 {
+  background: rgba(140, 82, 255, 0.62);
+  border-radius: 45px;
+  width: 1654px;
+  height: 758px;
+  position: absolute;
+  left: -35px;
+  top: 1019px;
+}
+.rectangle-10 {
+  background: rgba(140, 82, 255, 0.62);
+  border-radius: 45px;
+  width: 1654px;
+  height: 758px;
+  position: absolute;
+  left: -116px;
+  top: 2900px;
+}
+.rectangle-4 {
+  border-radius: 45px;
+  border-style: solid;
+  border-color: #8c52ff;
+  border-width: 2px;
+  width: 286px;
+  height: 384px;
+  position: absolute;
+  left: 205px;
+  top: 2006px;
+}
+.rectangle-5 {
+  border-radius: 45px;
+  border-style: solid;
+  border-color: #8c52ff;
+  border-width: 2px;
+  width: 286px;
+  height: 384px;
+  position: absolute;
+  left: 931px;
+  top: 2006px;
+}
+.rectangle-6 {
+  border-radius: 45px;
+  border-style: solid;
+  border-color: #8c52ff;
+  border-width: 2px;
+  width: 286px;
+  height: 384px;
+  position: absolute;
+  left: 568px;
+  top: 2006px;
+}
+.connecting-hearts-sharing-meals {
+  color: #ffffff;
+  text-align: left;
+  font: 600 64px/62.5px "Inter", sans-serif;
+  position: absolute;
+  left: 720px;
+  top: 1090px;
+  width: 619px;
+  height: 287px;
+}
+.lorem-ipsum-dolor-sit-amet-consectetur-iaculis-diam-augue-a-adipiscing-non-aliquet-leo-semper-lacus-fringilla-consectetur-cras-ac-ullamcorper-ut-risus-nunc-diam-accumsan-feugiat-tristique-diam-consectetur-aliquam-vitae-suspendisse-vel-leo-nec-quisque-senectus-laoreet-id-pulvinar-id-vulputate-montes-consectetur-diam-non-aliquam-nunc-maecenas-non-molestie-pretium-amet-id-dictum-vitae-nam-vel-sit-rhoncus-massa-velit-ut-amet-massa-morbi-eget {
+  color: #000000;
+  text-align: center;
+  font: 400 26px/44px "Inter", sans-serif;
+  position: absolute;
+  left: 223px;
+  top: 2444px;
+  width: 994px;
+  height: 303px;
+}
+.we-are-a-vibrant-hub-that-brings-together-food-aid-organizations-generous-food-providers-and-individuals-in-need-creating-a-powerful-network-dedicated-to-fighting-hunger-and-nourishing-communities-our-website-serves-as-a-bridge-seamlessly-connecting-those-in-need-with-those-who-can-help {
+  color: #000000;
+  text-align: left;
+  font: 300 32px/44px "Inter", sans-serif;
+  position: absolute;
+  left: 720px;
+  top: 1242px;
+  width: 626px;
+  height: 419px;
+}
+.image-1 {
+  width: 399px;
+  height: 401px;
+  position: absolute;
+  left: 876px;
+  top: 333px;
+}
+.rectangle-3 {
+  background: rgba(140, 82, 255, 0.62);
+  border-radius: 45px;
+  width: 477px;
+  height: 615px;
+  position: absolute;
+  left: 92px;
+  top: 1105px;
+}
+.rectangle-12 {
+  background: rgba(140, 82, 255, 0.62);
+  border-radius: 45px;
+  width: 477px;
+  height: 615px;
+  position: absolute;
+  left: 139px;
+  top: 1073px;
+}
+.heading {
+  position: absolute;
+  inset: 0;
+}
+.get-in-touch {
+  color: #000000;
+  text-align: center;
+  font: 500 48px/20px "Inter", sans-serif;
+  position: absolute;
+  left: 503px;
+  top: 3042px;
+  width: 434px;
+  height: 67px;
+}
+.rectangle-11 {
+  background: #ffffff;
+  border-radius: 45px;
+  width: 477px;
+  height: 615px;
+  position: absolute;
+  left: 115px;
+  top: 1090px;
+}
+.image-2 {
+  width: 530px;
+  height: 617px;
+  position: absolute;
+  left: 62px;
+  top: 1082px;
+}
