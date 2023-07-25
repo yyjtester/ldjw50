@@ -1,0 +1,116 @@
+/* Apply general styles to all elements inside .nav-bar */
+.nav-bar,
+.nav-bar * {
+  box-sizing: border-box;
+}
+
+/* Style the navbar container */
+.nav-bar {
+  background: #ffffff;
+  padding: 0 20px; /* Adjust padding as needed */
+  height: 131px;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* Style the logo */
+.image-2023-06-04-194604449-removebg-preview-1 {
+  width: 126px;
+  height: 126px;
+  position: absolute;
+  left: 20px; /* Adjust logo position as needed */
+  top: 5px; /* Adjust logo position as needed */
+}
+
+/* Style the button panel */
+.button-panel {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Adjust spacing between buttons */
+  align-items: center;
+  position: absolute;
+  right: 20px; /* Adjust button panel position as needed */
+  top: 50%; /* Center the button panel vertically */
+  transform: translateY(-50%); /* Center the button panel vertically */
+}
+
+/* Style common button styles */
+.button {
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+/* Specific style for the login button */
+.button3 {
+  background: #8c52ff;
+}
+
+/* Style login button text */
+.button-header2 {
+  color: #ffffff;
+}
+/* Apply general styles to all elements inside .nav-bar */
+.nav-bar,
+.nav-bar * {
+  box-sizing: border-box;
+}
+
+/* Style the navbar container */
+.nav-bar {
+  background: #ffffff;
+  padding: 0 20px; /* Adjust padding as needed */
+  height: 131px;
+  position: relative;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* Style the logo */
+.image-2023-06-04-194604449-removebg-preview-1 {
+  width: 126px;
+  height: 126px;
+  position: absolute;
+  left: 20px; /* Adjust logo position as needed */
+  top: 5px; /* Adjust logo position as needed */
+}
+
+/* Style the button panel */
+.button-panel {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Adjust spacing between buttons */
+  align-items: center;
+  position: absolute;
+  right: 20px; /* Adjust button panel position as needed */
+  top: 50%; /* Center the button panel vertically */
+  transform: translateY(-50%); /* Center the button panel vertically */
+}
+
+/* Style common button styles */
+.button {
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+/* Specific style for the login button */
+.button3 {
+  background: #8c52ff;
+}
+
+/* Style login button text */
+.button-header2 {
+  color: #ffffff;
+}
