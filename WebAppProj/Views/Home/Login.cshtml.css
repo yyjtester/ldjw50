@@ -1,0 +1,191 @@
+.login-page, .login-page * {
+    margin: auto;
+    box-sizing: border-box;
+    }
+.login-page {
+   background: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+    overflow: hidden;
+   }
+
+.heading {
+   position: absolute;
+    inset: 0;
+   }
+
+.log-in-to-grape-aid {
+   color: #000000;
+    text-align: center;
+    font: 500 48px/20px 'Inter', sans-serif;
+    position: absolute;
+    left: 479px;
+   top: 342px;
+    width: 509px;
+    height: 39px;
+   }
+
+.welcome-back {
+   color: #000000;
+    text-align: center;
+    font: 300 24px/20px 'Inter', sans-serif;
+    position: absolute;
+    left: 479px;
+   top: 390px;
+    width: 509px;
+    height: 32px;
+   }
+
+.form {
+   position: absolute;
+    inset: 0;
+   }
+
+.email-address {
+   color: #676767;
+    text-align: center;
+    font: 300 24px/35px 'Inter', sans-serif;
+    position: absolute;
+    left: calc(50% - 82px);
+   top: calc(50% - 56px);
+    width: 192px;
+    height: 31.45px;
+    display: flex;
+   align-items: center;
+   justify-content: center}
+
+.password {
+   color: #676767;
+    text-align: center;
+    font: 300 24px/35px 'Inter', sans-serif;
+    position: absolute;
+    left: calc(50% - 82px);
+   top: calc(50% - -9px);
+    width: 192px;
+    height: 31.45px;
+    display: flex;
+   align-items: center;
+   justify-content: center}
+
+.rectangle-10 {
+   border-radius: 17px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 508px;
+    height: 42px;
+    position: absolute;
+    left: calc(50% - 240px);
+   top: 451px;
+   }
+
+.rectangle-11 {
+   border-radius: 17px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 509px;
+    height: 42px;
+    position: absolute;
+    left: calc(50% - 241px);
+   top: 516px;
+   }
+
+.sign-up-button {
+   position: absolute;
+    inset: 0;
+   }
+
+.button {
+   background: #8c52ff;
+    border-radius: 74px;
+    width: 509px;
+    height: 53.91px;
+    position: absolute;
+    left: calc(50% - -268px);
+   top: calc(50% - -137.91px);
+    transform-origin: 0 0;
+    transform: rotate(180deg) scale(1, 1);
+   }
+
+.log-in {
+   color: #ffffff;
+    text-align: center;
+    font: 300 24px/35px 'Inter', sans-serif;
+    position: absolute;
+    left: calc(50% - 192.68px);
+   top: calc(50% - -94.78px);
+    width: 412.35px;
+    height: 31.45px;
+    display: flex;
+   align-items: center;
+   justify-content: center}
+
+.thin-outline {
+   border-radius: 74px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+    width: 630px;
+    height: 666px;
+    position: absolute;
+    left: calc(50% - -333px);
+   top: calc(50% - -389px);
+    box-shadow: inset 0px 20px 31px 0px rgba(140, 82, 255, 0.62);
+    transform-origin: 0 0;
+    transform: rotate(180deg) scale(1, 1);
+   }
+
+.don-t-have-an-account {
+   color: #000000;
+    text-align: center;
+    font: 300 24px/20px 'Inter', sans-serif;
+    position: absolute;
+    left: 487px;
+   top: 698px;
+    width: 509px;
+    height: 32px;
+   }
+
+.log-in-button {
+   position: absolute;
+    inset: 0;
+   }
+
+.button2 {
+   background: #17c470;
+    border-radius: 74px;
+    width: 518px;
+    height: 53.91px;
+    position: absolute;
+    left: calc(50% - -277px);
+   top: calc(50% - -282.91px);
+    transform-origin: 0 0;
+    transform: rotate(180deg) scale(1, 1);
+   }
+
+.sign-up {
+   color: #ffffff;
+    text-align: center;
+    font: 300 24px/35px 'Inter', sans-serif;
+    position: absolute;
+    left: calc(50% - 199px);
+   top: calc(50% - -240px);
+    width: 419.65px;
+    height: 31.45px;
+    display: flex;
+   align-items: center;
+   justify-content: center}
+
+.line-1 {
+   border-style: solid;
+    border-color: #000000;
+    border-width: 1px 0 0 0;
+    width: 509px;
+    height: 0px;
+    position: absolute;
+    left: 488px;
+   top: 679px;
+   }
+
