@@ -18,7 +18,11 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Login()
+    {
+        return View();
+    }
+    public IActionResult LearningHub()
     {
         return View();
     }
