@@ -1,14 +1,16 @@
 <?php
 
 $host="localhost";
-$user="root";
-$password="J./HzjrZ4h90(wG3";
+$user="fypuser";
+$password="root";
 $db="mydb";
 
-$con = mysqli_connect($host, $user, $password, $db);
+$conn = new mysqli(hostname: $host, username: $user, password: $password, database: $db);
 
-if ($con == false) {
-  die("Connection failed: " . $con->connect_error);
+if ($conn->connect_error) {
+  die("Connection error: " . $conn->connect_error);
 }
   
+return $conn;
+
 ?>
