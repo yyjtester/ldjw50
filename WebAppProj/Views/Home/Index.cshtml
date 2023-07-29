@@ -1,14 +1,17 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+	 <!-- Links to include bootscrap and jquery  -->
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
   <link rel="stylesheet" type="text/css" href="Index.cshtml.css">
 </head>
 <body>
+	<!-- Navigation Bar -->
   @await Html.PartialAsync("NavBar")
 
+<!-- Footer section -->
  <div class="landing-page-button" >
   	<div class="footer" >
     		<div class="footer-bg" >
@@ -39,6 +42,8 @@ Ending hunger, nourishing communities.
   	</span>
 </div>
 </div>
+
+<!-- Food Insecurity Section -->
 <div class="let-food-insecurity-rest" >
   	<div class="let-food-insecurity-rest2" >
 Let Food Insecurity Rest 
@@ -48,6 +53,8 @@ We implement efficient food distribution networks to minimize waste and maximize
   	<br/>We believe that everyone deserves access to wholesome meals, and together, we are sowing the seeds of a hunger-free world. Join the transformational journey today and help put food insecurity to rest for good. 
 </div>
 </div>
+
+<!-- Connecting Hearts Section -->
 <div class="connecting-hearts" >
   	<div class="connect-hearts-bg" >
   	</div>
@@ -59,6 +66,8 @@ We are a vibrant hub that brings together food aid organizations, generous food 
 Connecting Hearts, Sharing Meals 
 </div>
 </div>
+
+<!-- Giving You Great Aid Section -->
 <div class="giving-you-great-aid" >
   	<div class="learn-more-button" >
     		<div class="button" >
@@ -81,7 +90,7 @@ A centralized, safe space to bridge the gap between surplus food resources and t
 </div>
 
 
-  <!-- Include necessary scripts here -->
+  <!-- Scripts to include bootscrap and jquery  -->
   <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>
