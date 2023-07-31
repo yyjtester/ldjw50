@@ -48,13 +48,17 @@
   text-align: center;
   font: 300 24px/35px "Inter", sans-serif;
   position: absolute;
-  left: calc(50% - 82px);
-  top: calc(50% - 56px);
-  width: 192px;
-  height: 31.45px;
+  left: calc(50% - 240px);
+  top: 451px;
+  width: 508px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
 }
 
 .password {
@@ -62,13 +66,17 @@
   text-align: center;
   font: 300 24px/35px "Inter", sans-serif;
   position: absolute;
-  left: calc(50% - 82px);
-  top: calc(50% - -9px);
-  width: 192px;
-  height: 31.45px;
+  left: calc(50% - 240px);
+  top: 516px;
+  width: 508px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
 }
 
 .rectangle-10 {
