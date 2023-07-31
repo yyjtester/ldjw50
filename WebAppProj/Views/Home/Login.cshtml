@@ -2,61 +2,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" type="text/css" href="Login.cshtml.css">
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
+	<link rel="stylesheet" type="text/css" href="Login.cshtml.css">
   </head>
   <body>
-  @await Html.PartialAsync("NavBar");
+	@await Html.PartialAsync("NavBar");
 
  <div class="login-page" >
-  	<div class="heading" >
-    		<div class="log-in-to-grape-aid" >
+	  <div class="heading" >
+			<div class="log-in-to-grape-aid" >
 Log In to GrapeAid 
 </div>
-    		<div class="welcome-back" >
+			<div class="welcome-back" >
 Welcome back. 
 </div>
-  	</div>
-  	<div class="form" >
-    		<input class="email-address" type="email" placeholder="Email Address">
+	  </div>
+	  <div class="form" >
+			<input class="email-address" type="email" placeholder="Email Address">
 
 </input>
-    		<input class="password" type="password" placeholder="Password">
+			<input class="password" type="password" placeholder="Password">
 
 </input>
-    		<div class="rectangle-10" >
-    		</div>
-    		<div class="rectangle-11" >
-    		</div>
-  	</div>
-  	<div class="sign-up-button" >
-    		<div class="button" >
-    		</div>
-    		<div class="log-in" >
+			<div class="rectangle-10" >
+			</div>
+			<div class="rectangle-11" >
+			</div>
+	  </div>
+	  <div class="sign-up-button" >
+			<div class="button" >
+			</div>
+			<div class="log-in" >
 Log In 
 </div>
-  	</div>
-  	<div class="thin-outline" >
-  	</div>
-  	<div class="don-t-have-an-account" >
+	  </div>
+	  <div class="thin-outline" >
+	  </div>
+	  <div class="don-t-have-an-account" >
 Don’t have an account? 
 </div>
-  	<div class="log-in-button" >
-    		<div class="button2" >
-    		</div>
-    		<div class="sign-up" >
-Sign Up 
+	  <div class="log-in-button" >
+			<div class="button2" >
+			</div>
+			<div class="sign-up" >
+<a href="/Home/SignUp">Sign Up</a>
 </div>
-  	</div>
-  	<div class="line-1" >
-  	</div>
+	  </div>
+	  <div class="line-1" >
+	  </div>
 </div>
 
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
   </body>
 </html>
