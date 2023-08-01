@@ -1,0 +1,371 @@
+.sign-up,
+.sign-up * {
+  margin: auto;
+  box-sizing: border-box;
+}
+.sign-up {
+  background: #ffffff;
+  width: 1440px;
+  height: 1514px;
+  position: relative;
+  overflow: hidden;
+}
+
+.already-have-an-account {
+  color: #000000;
+  text-align: center;
+  font: 300 24px/20px "Inter", sans-serif;
+  position: absolute;
+  left: 777px;
+  top: 765px;
+  width: 509px;
+  height: 32px;
+}
+
+.heading {
+  position: absolute;
+  inset: 0;
+}
+
+.welcome-to-grape-aid {
+  color: #000000;
+  text-align: left;
+  font: 500 48px/20px "Inter", sans-serif;
+  position: absolute;
+  left: 778px;
+  top: 283px;
+  width: 544px;
+  height: 39px;
+}
+
+.get-started-with-us {
+  color: #000000;
+  text-align: center;
+  font: 300 24px/20px "Inter", sans-serif;
+  position: absolute;
+  left: 778px;
+  top: 331px;
+  width: 509px;
+  height: 32px;
+}
+
+.form {
+  position: absolute;
+  inset: 0;
+}
+
+.footer {
+  width: 1563px;
+  height: 417px;
+  position: static;
+}
+
+.footer-bg {
+  background: rgba(140, 82, 255, 0.62);
+  border-radius: 45px;
+  width: 1563px;
+  height: 417px;
+  position: absolute;
+  left: -70px;
+  top: 1097px;
+}
+
+.copyright-2024-grape-aid {
+  color: #000000;
+  text-align: center;
+  font: 400 24px "Sora", sans-serif;
+  position: absolute;
+  left: 433px;
+  top: 1453.48px;
+  width: 579px;
+  height: 20.06px;
+}
+
+.ending-hunger-nourishing-communities {
+  color: #ffffff;
+  text-align: center;
+  font: 600 36px "Sora", sans-serif;
+  position: absolute;
+  left: 373px;
+  top: 1163px;
+}
+
+.based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore {
+  color: #000000;
+  text-align: center;
+  position: absolute;
+  left: 192px;
+  top: 1260px;
+}
+
+.based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span {
+  color: #000000;
+
+  font: 300 32px "Sora", sans-serif;
+}
+
+.based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2 {
+  color: #000000;
+
+  font: 300 24px "Sora", sans-serif;
+}
+
+.contact-us-instagram-linkedin {
+  color: #000000;
+  text-align: center;
+  position: absolute;
+  left: 966px;
+  top: 1260px;
+}
+
+.contact-us-instagram-linkedin-span {
+  color: #000000;
+
+  font: 300 32px "Sora", sans-serif;
+}
+
+.contact-us-instagram-linkedin-span2 {
+  color: #000000;
+
+  font: 300 24px "Sora", sans-serif;
+}
+
+.contact-us-instagram-linkedin-span3 {
+  color: #000000;
+
+  font: 300 24px "Sora", sans-serif;
+
+  text-decoration: underline;
+}
+
+.first-name {
+  color: #676767;
+  text-align: center;
+  font: 300 24px/35px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - -79px);
+  top: calc(50% - 359px);
+  width: 192px;
+  height: 31.45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-address {
+  color: #676767;
+  text-align: center;
+  font: 300 24px/35px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - -216px);
+  top: calc(50% - 295px);
+  width: 192px;
+  height: 31.45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password {
+  color: #676767;
+  text-align: center;
+  font: 300 24px/35px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - -216px);
+  top: calc(50% - 230px);
+  width: 192px;
+  height: 31.45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.repeat-password {
+  color: #676767;
+  text-align: center;
+  font: 300 24px/35px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - -189px);
+  top: calc(50% - 165px);
+  width: 246px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.last-name {
+  color: #676767;
+  text-align: center;
+  font: 300 24px/35px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - -350px);
+  top: calc(50% - 359px);
+  width: 192px;
+  height: 31.45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-name-rect {
+  border-radius: 17px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 234px;
+  height: 42px;
+  position: absolute;
+  left: calc(50% - -59px);
+  top: 394px;
+}
+
+.last-name-rect {
+  border-radius: 17px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 240px;
+  height: 42px;
+  position: absolute;
+  left: calc(50% - -327px);
+  top: 394px;
+}
+
+.email-rect {
+  border-radius: 17px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 508px;
+  height: 42px;
+  position: absolute;
+  left: calc(50% - -59px);
+  top: 458px;
+}
+
+.pass-rect {
+  border-radius: 17px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 509px;
+  height: 42px;
+  position: absolute;
+  left: calc(50% - -58px);
+  top: 523px;
+}
+
+.r-pass-rect {
+  border-radius: 17px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 509px;
+  height: 42px;
+  position: absolute;
+  left: calc(50% - -58px);
+  top: 587px;
+}
+
+.sign-up-button {
+  position: absolute;
+  inset: 0;
+}
+
+.button {
+  background: #17c470;
+  border-radius: 74px;
+  width: 509px;
+  height: 53.91px;
+  position: absolute;
+  left: calc(50% - -566px);
+  top: calc(50% - 43.09px);
+  transform-origin: 0 0;
+  transform: rotate(180deg) scale(1, 1);
+}
+
+.sign-up2 {
+  color: #ffffff;
+  text-align: center;
+  font: 300 24px/35px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - -105.32px);
+  top: calc(50% - 86.22px);
+  width: 412.35px;
+  height: 31.45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-in-button {
+  position: absolute;
+  inset: 0;
+}
+
+.button2 {
+  background: #8c52ff;
+  border-radius: 74px;
+  width: 509px;
+  height: 53.91px;
+  position: absolute;
+  left: calc(50% - -566px);
+  top: calc(50% - -103.91px);
+  transform-origin: 0 0;
+  transform: rotate(180deg) scale(1, 1);
+}
+
+.log-in {
+  color: #ffffff;
+  text-align: center;
+  font: 300 24px/35px "Inter", sans-serif;
+  position: absolute;
+  left: calc(50% - -105.32px);
+  top: calc(50% - -60.78px);
+  width: 412.35px;
+  height: 31.45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-1 {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px 0 0 0;
+  width: 509px;
+  height: 0px;
+  position: absolute;
+  left: 778px;
+  top: 746px;
+}
+
+.signup-img-bg {
+  background: #17c470;
+  border-radius: 45px;
+  opacity: 0.5;
+  width: 562px;
+  height: 685px;
+  position: absolute;
+  left: 93px;
+  top: 252px;
+}
+
+.rectangle-8 {
+  background: #ffffff;
+  border-radius: 45px;
+  width: 562px;
+  height: 685px;
+  position: absolute;
+  left: 115px;
+  top: 229px;
+}
+
+.signup-img {
+  width: 616px;
+  height: 703px;
+  position: absolute;
+  left: 61px;
+  top: 229px;
+}

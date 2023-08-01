@@ -89,10 +89,10 @@
 
 .contact-us-instagram-linkedin-span3 {
   color: #000000;
-
+  position: relative;
+  z-index: 1;
+  top: 20px;
   font: 300 24px "Sora", sans-serif;
-
-  text-decoration: underline;
 }
 
 .let-food-insecurity-rest {
