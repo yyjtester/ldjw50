@@ -188,6 +188,8 @@
 
 .learn-more {
   color: #ffffff;
+  text-decoration: none;
+  outline: none;
   text-align: center;
   font: 300 24px/35px "Inter", sans-serif;
   position: absolute;

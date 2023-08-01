@@ -319,6 +319,26 @@
   justify-content: center;
 }
 
+.radio-group {
+  width: 432px;
+  height: 33px;
+  padding: 10px;
+  position: absolute;
+  top: 710px;
+  left: 870px;
+  z-index: 1;
+}
+
+input[type="radio"]{
+  margin: 0 15px 0 15px;
+}
+
+label {
+  color: #000000;
+  text-align: center;
+  font: 300 24px/20px 'Inter', sans-serif;
+}
+
 .log-in-button {
   position: absolute;
   inset: 0;
