@@ -286,7 +286,7 @@
 .contact-us-instagram-linkedin-span3 {
  
          color: #000000;
- 
+         z-index: 1;
          font: 300 24px 'Sora', sans-serif;
  
          
