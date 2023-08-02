@@ -28,6 +28,10 @@ steps:
     projectKey: '21025478_mvc2'
     projectName: 'mvc2'
 
+- bash: |
+      echo "sonar.exclusions=**/*.cshtml, **/*.cs" >> sonar-project.properties
+  displayName: 'Configure SonarCloud Exclusions'
+
 - task: UseDotNet@2
   displayName: 'Install .NET Core SDK'
   inputs:
