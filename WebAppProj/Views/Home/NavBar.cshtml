@@ -7,23 +7,27 @@
 	  <a href="/Home/Index" class="Logo">
 		<img class="grapeaidlogo" src="~/images/grapeaidlogo.jpg" />   <!-- Grape Aid Logo image showcase  -->
 	  </a>
-	  <div class="button-panel">
-		<div class="button">
+	  <ul class="button-panel">
+		<li class="button">
 		  <a href="/Home/Index" class="button-header">Home</a>   <!-- Button to redirect to Home page  -->
-		</div>
-		<div class="button">
+		</li>
+		<li class="button">
 		  <a href="/Home/Connections" class="button-header">Connections</a> <!-- Button to redirect to Connections page  -->
-		</div>
-		<div class="button">
+		  <ul class="dropdown">
+			<li><a href="/Home/About">Donations</a></li>
+			<li><a href="/Home/About">Requests</a></li>
+		  </ul> 
+		</li>
+		<li class="button">
 		  <a href="/Home/LearningHub" class="button-header">Learning Hub</a> <!-- Button to redirect to Learning Hub page  -->
-		</div>
-		<div class="button">
+		</li>
+		<li class="button">
 		  <a href="/Home/About" class="button-header">About</a> <!-- Button to redirect to About page  -->
-		</div>
-		<div class="button3">
+		</li>
+		<li class="button3">
 		  <a href="/Home/Login" class="button-header2">Log In</a> <!-- Button to redirect to Log in page  -->
-		</div>
-	  </div>
+		</li>
+	  </ul>
 	</nav>
   </body>
 </html>

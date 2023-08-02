@@ -50,6 +50,33 @@
   flex-shrink: 0;
 }
 
+.nav-bar ul li {
+  display: block;
+}
+
+.nav-bar ul li a:hover{
+  background-color: #8c52ff;
+}
+
+.dropdown {
+  color: var(--font-color-primary, #ffffff);
+  text-indent: -21px;
+  font: 500 14px/20px "Inter", sans-serif;
+  text-transform: uppercase;
+  width: 105px;
+  position: static;
+  display: none;
+  position: absolute;
+  background-color: #8c52ff;
+  border-radius: 8px;
+}
+
+.nav-bar li:hover > ul {
+  color: #8c52ff;
+  display: block;
+  position: absolute;
+}
+
 /* Style button text */
 .button-header {
   color: var(--font-color-primary, #3c3a36);
