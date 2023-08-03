@@ -26,15 +26,19 @@ public class HomeController : Controller
     {
         return View();
     }
-        public IActionResult Connections()
+    public IActionResult Connections()
     {
         return View();
     }
-        public IActionResult Signup()
+    public IActionResult Signup()
     {
         return View();
     }
-        public IActionResult About()
+    public IActionResult About()
+    {
+        return View();
+    }
+    public IActionResult Requests_R()
     {
         return View();
     }
