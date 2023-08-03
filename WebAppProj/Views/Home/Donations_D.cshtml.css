@@ -139,9 +139,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
 }
 
-.descriptionn {
+.description {
   width: 498.29px;
   height: 204px;
   position: static;
@@ -172,6 +176,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+}
+
+textarea {
+  max-height: auto;
+  min-height: 160px;
+  max-width: auto;
+  min-width: 200px;
+  position: absolute;
 }
 
 .submit {
