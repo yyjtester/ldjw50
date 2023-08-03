@@ -1,4 +1,3 @@
-/* Apply general styles to all elements inside .nav-bar */
 .nav-bar,
 .nav-bar * {
   margin: auto;
@@ -56,23 +55,28 @@
 
 .nav-bar ul li a:hover{
   background-color: #8c52ff;
+  background-size: contain;
+  border-radius: 5px;
 }
 
 .dropdown {
-  color: var(--font-color-primary, #ffffff);
+  color: var(--font-color-primary, #3c3a36);
   text-indent: -21px;
   font: 500 14px/20px "Inter", sans-serif;
   text-transform: uppercase;
   width: 105px;
-  position: static;
   display: none;
   position: absolute;
   background-color: #8c52ff;
   border-radius: 8px;
 }
 
+.dropdown a:hover {
+  color: var(--font-color-primary, #ffffff);
+}
+
 .nav-bar li:hover > ul {
-  color: #8c52ff;
+  color: #8c5ff;
   display: block;
   position: absolute;
 }
@@ -89,6 +93,7 @@
 /* Specific style for the login button */
 .button3 {
   background: #8c52ff;
+  border-radius: 5px;
 }
 
 /* Style login button text */
@@ -99,3 +104,4 @@
   text-transform: uppercase;
   position: relative;
 }
+
