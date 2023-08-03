@@ -38,7 +38,7 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Requests_R()
+    public IActionResult Donations_D()
     {
         return View();
     }
