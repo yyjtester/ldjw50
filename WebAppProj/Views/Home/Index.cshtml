@@ -1,101 +1,234 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-	 <!-- Links to include bootscrap and jquery  -->
+  <!-- Links to include bootscrap and jquery  -->
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
   <link rel="stylesheet" type="text/css" href="Index.cshtml.css">
 </head>
 <title>Home page</title>
+
 <body>
-	<!-- Navigation Bar -->
+  <!-- Navigation Bar -->
   @await Html.PartialAsync("NavBar")
 
-<!-- Footer section -->
-<div class="landing-page-button">
-  <div class="footer">
-    <div class="footer-bg">
-    </div>
-    <div class="copyright-2024-grape-aid">
-      Copyright © 2024, GrapeAid.
-    </div>
-    <div class="ending-hunger-nourishing-communities">
-      Ending hunger, nourishing communities.
-    </div>
-    <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
-      <span>
-        <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br />
+  <!-- Footer section -->
+  <div class="landing-page-button">
+    <div class="footer">
+      <div class="footer-bg">
+      </div>
+      <div class="copyright-2024-grape-aid">
+        Copyright © 2024, GrapeAid.
+      </div>
+      <div class="ending-hunger-nourishing-communities">
+        Ending hunger, nourishing communities.
+      </div>
+      <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
+        <span>
+          <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br />
+          </span>
+          <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
+            <br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore</span>
         </span>
-        <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
-          <br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore</span>
-      </span>
-    </div>
-    <div class="contact-us-instagram-linkedin">
-      <span>
-        <span class="contact-us-instagram-linkedin-span">Contact us<br />
-        </span>
-        <span class="contact-us-instagram-linkedin-span2">
+      </div>
+      <div class="contact-us-instagram-linkedin">
+        <span>
+          <span class="contact-us-instagram-linkedin-span">Contact us<br />
+          </span>
+          <span class="contact-us-instagram-linkedin-span2">
 
+          </span>
+          <div class="contact-us-instagram-linkedin-span3">
+            <a href="https://www.youtube.com">Instagram</a><br />
+            <a href="https://www.linkedin.com/in/chloe-sacil-419844210/">Linkedin</a>
+          </div>
         </span>
-        <div class="contact-us-instagram-linkedin-span3">
-          <a href="https://www.youtube.com">Instagram</a><br />
-          <a href="https://www.linkedin.com/in/chloe-sacil-419844210/">Linkedin</a>
+      </div>
+    </div>
+
+    <!-- discover Section -->
+    <div class="field__item">
+      <div class="paragraph paragraph--type--text-with-image-list paragraph--view-mode--default">
+
+        <div
+          class="view-mode-default field field--name-field-items field--type-entity-reference-revisions field--label-hidden field__items">
+          <div class="field__item">
+            <div class="paragraph paragraph--type--text-with-image paragraph--view-mode--default">
+
+              <div
+                class="view-mode-default field field--name-field-media field--type-entity-reference field--label-hidden field__items">
+                <div class="field__item">
+                  <article class="media media--type-image media--id-39 media--view-mode-_-3">
+
+
+                    <div
+                      class="view-mode-_-3 field field--name-field-media-image field--type-image field--label-visually_hidden">
+                      <div class="field__label visually-hidden">Image</div>
+                      <div class="field__item">
+                        <div class="2023-report_and_events">
+                          <img class="2023-report_and_events" src="~/images/fyp 2023 report and events calender.jpg"
+                            width="300" height="250" />
+                          <picture>
+                            <source
+                              srcset="/sites/default/files/styles/4_3_large/public/media/images/calendar.jpg?h=4a7d1ed4&amp;itok=4ai3K9_a 1x"
+                              media="all and (min-width: 1439px)" type="image/jpeg">
+                            <source
+                              srcset="/sites/default/files/styles/4_3_normal/public/media/images/calendar.jpg?h=4a7d1ed4&amp;itok=P1LjgCqg 1x"
+                              media="all and (min-width: 971px)" type="image/jpeg">
+                            
+                          </picture>
+
+                        </div>
+                      </div>
+
+                  </article>
+                </div>
+              </div>
+
+              <div class="group-text">
+
+                <div
+                  class="view-mode-default clearfix text-formatted field field--name-field-title field--type-text field--label-hidden field__item"
+                  style="transform: translate(0px, 0px); opacity: 1;">2023 Reports and events calendar</div>
+
+                <div
+                  class="view-mode-default clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item"
+                  style="transform: translate(0px, 0px); opacity: 1;">
+                  <p>An annual round up of food security reports and events.</p>
+                </div>
+
+                <div
+                  class="view-mode-default field field--name-field-cta field--type-link field--label-hidden field__items"
+                  style="transform: translate(0px, 0px); opacity: 1;">
+                  <div class="field__item"><a href="/reports-and-events-calendar-2023">Discover more</a></div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="field__item">
+            <div class="paragraph paragraph--type--text-with-image paragraph--view-mode--default">
+
+              <div
+                class="view-mode-default field field--name-field-media field--type-entity-reference field--label-hidden field__items">
+                <div class="field__item">
+                  <article class="media media--type-image media--id-36 media--view-mode-_-3">
+
+
+                    <div
+                      class="view-mode-_-3 field field--name-field-media-image field--type-image field--label-visually_hidden">
+                      <div class="field__label visually-hidden">Image</div>
+                      <div class="field__item">
+                        <picture>
+                          <img class="global-report-on-food-crises" src="~/images/global report on food crises.jpg"
+                            width="300" height="250" />
+                          <source
+                            srcset="/sites/default/files/styles/4_3_large/public/media/images/cover-dev.jpg?h=949b8b9e&amp;itok=xSBNwiQi 1x"
+                            media="all and (min-width: 1439px)" type="image/jpeg">
+                          <source
+                            srcset="/sites/default/files/styles/4_3_normal/public/media/images/cover-dev.jpg?h=949b8b9e&amp;itok=Wq0gSXaD 1x"
+                            media="all and (min-width: 971px)" type="image/jpeg">
+                          
+
+                        </picture>
+
+                      </div>
+                    </div>
+
+                  </article>
+                </div>
+              </div>
+
+              <div class="group-text">
+
+                <div
+                  class="view-mode-default clearfix text-formatted field field--name-field-title field--type-text field--label-hidden field__item"
+                  style="transform: translate(0px, 0px); opacity: 1;">Global Report on Food Crises 2023</div>
+
+                <div
+                  class="view-mode-default clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item"
+                  style="transform: translate(0px, 0px); opacity: 1;">
+                  <p>Explore the full report and its related resources</p>
+                </div>
+
+                <div
+                  class="view-mode-default field field--name-field-cta field--type-link field--label-hidden field__items"
+                  style="transform: translate(0px, 0px); opacity: 1;">
+                  <div class="field__item"><a href="/global-report-food-crises-2023">Explore GRFC 2023</a></div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
         </div>
-      </span>
-    </div>
-  </div>
 
-  <!-- Food Insecurity Section -->
-  <div class="let-food-insecurity-rest">
-    <div class="let-food-insecurity-rest2">
-      Let Food Insecurity Rest
-    </div>
-    <div class="we-implement-efficient-food-distribution-networks-to-minimize-waste-and-maximize-impact-innovative-food-rescue-programs-redirect-surplus-meals-to-those-in-need-while-educational-resources-empower-communities-to-cultivate-sustainable-food-sources-we-believe-that-everyone-deserves-access-to-wholesome-meals-and-together-we-are-sowing-the-seeds-of-a-hunger-free-world-join-the-transformational-journey-today-and-help-put-food-insecurity-to-rest-for-good">
-      We implement efficient food distribution networks to minimize waste and maximize impact. Innovative food rescue programs redirect surplus meals to those in need, while educational resources empower communities to cultivate sustainable food sources. <br />
-      <br />We believe that everyone deserves access to wholesome meals, and together, we are sowing the seeds of a hunger-free world. Join the transformational journey today and help put food insecurity to rest for good.
-    </div>
-  </div>
-
-  <!-- Connecting Hearts Section -->
-  <div class="connecting-hearts">
-    <div class="connect-hearts-bg">
-    </div>
-    <div class="we-are-a-vibrant-hub-that-brings-together-food-aid-organizations-generous-food-providers-and-individuals-in-need-creating-a-powerful-network-dedicated-to-fighting-hunger-and-nourishing-communities-our-website-serves-as-a-bridge-seamlessly-connecting-those-in-need-with-those-who-can-help">
-      We are a vibrant hub that brings together food aid organizations, generous food providers, and individuals in need, creating a powerful network dedicated to fighting hunger and nourishing communities.<br />
-      <br />Our website serves as a bridge, seamlessly connecting those in need with those who can help.
-    </div>
-    <div class="connecting-hearts-sharing-meals">
-      Connecting Hearts, Sharing Meals
-    </div>
-  </div>
-
-  <!-- Giving You Great Aid Section -->
-  <div class="giving-you-great-aid">
-    <div class="learn-more-button">
-      <div class="button">
-      </div>
-      <div id class="learn-more">
-        <a href="/Home/LearningHub">Learn More</a>
       </div>
     </div>
-    <div class="giving-you-great-aid2">
-      <span>
-        <span class="giving-you-great-aid-2-span">Giving you </span>
-        <span class="giving-you-great-aid-2-span2">great aid.</span>
-      </span>
+
+    <!-- Food Insecurity Section -->
+    <div class="let-food-insecurity-rest">
+      <div class="let-food-insecurity-rest2">
+        Let Food Insecurity Rest
+      </div>
+      <div
+        class="we-implement-efficient-food-distribution-networks-to-minimize-waste-and-maximize-impact-innovative-food-rescue-programs-redirect-surplus-meals-to-those-in-need-while-educational-resources-empower-communities-to-cultivate-sustainable-food-sources-we-believe-that-everyone-deserves-access-to-wholesome-meals-and-together-we-are-sowing-the-seeds-of-a-hunger-free-world-join-the-transformational-journey-today-and-help-put-food-insecurity-to-rest-for-good">
+        We implement efficient food distribution networks to minimize waste and maximize impact. Innovative food rescue
+        programs redirect surplus meals to those in need, while educational resources empower communities to cultivate
+        sustainable food sources. <br />
+        <br />We believe that everyone deserves access to wholesome meals, and together, we are sowing the seeds of a
+        hunger-free world. Join the transformational journey today and help put food insecurity to rest for good.
+      </div>
+
     </div>
-    <div class="a-centralized-safe-space-to-bridge-the-gap-between-surplus-food-resources-and-those-in-need-be-part-of-the-community">
-      A centralized, safe space to bridge the gap between surplus food resources and those in need.<br />
-      <br />Be part of the community.<br />
+
+    <!-- Connecting Hearts Section -->
+    <div class="connecting-hearts">
+      <div class="connect-hearts-bg">
+      </div>
+      <div
+        class="we-are-a-vibrant-hub-that-brings-together-food-aid-organizations-generous-food-providers-and-individuals-in-need-creating-a-powerful-network-dedicated-to-fighting-hunger-and-nourishing-communities-our-website-serves-as-a-bridge-seamlessly-connecting-those-in-need-with-those-who-can-help">
+        We are a vibrant hub that brings together food aid organizations, generous food providers, and individuals in
+        need, creating a powerful network dedicated to fighting hunger and nourishing communities.<br />
+        <br />Our website serves as a bridge, seamlessly connecting those in need with those who can help.
+      </div>
+      <div class="connecting-hearts-sharing-meals">
+        Connecting Hearts, Sharing Meals
+      </div>
+    </div>
+
+
+
+    <!-- Giving You Great Aid Section -->
+    <div class="giving-you-great-aid">
+      <div class="learn-more-button">
+        <div class="button">
+        </div>
+        <div id class="learn-more">
+          <a href="/Home/LearningHub">Learn More</a>
+        </div>
+      </div>
+      <div class="giving-you-great-aid2">
+        <span>
+          <span class="giving-you-great-aid-2-span">Giving you </span>
+          <span class="giving-you-great-aid-2-span2">great aid.</span>
+        </span>
+      </div>
+      <div
+        class="a-centralized-safe-space-to-bridge-the-gap-between-surplus-food-resources-and-those-in-need-be-part-of-the-community">
+        A centralized, safe space to bridge the gap between surplus food resources and those in need.<br />
+        <br />Be part of the community.<br />
+      </div>
     </div>
   </div>
-</div>
-
 
   <!-- Scripts to include bootscrap and jquery  -->
   <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
+
 </html>

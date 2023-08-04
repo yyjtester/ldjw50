@@ -240,3 +240,54 @@
   align-items: center;
   justify-content: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #3e3e3e;
+  font-family: Avenir Next,sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.paragraph--type--text-with-image-list {
+  margin-bottom: 6rem;
+}
+
+.paragraph--type--text-with-image-list {
+  margin-bottom: 3rem;
+}
+
+.paragraph--type--text-with-image-list .field--name-field-items .field__item:nth-of-type(odd) .paragraph--type--text-with-image {
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.paragraph--type--text-with-image {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.paragraph--type--text-with-image {
+  background-color: #f7f7f7;
+}
+
