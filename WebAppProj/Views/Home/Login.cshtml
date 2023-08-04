@@ -2,17 +2,20 @@
 @model Login
 <!DOCTYPE html>
 <html>
-  <head>
-		 <!-- Links to include bootscrap and jquery  -->
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-	<link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
-	<link rel="stylesheet" type="text/css" href="Login.cshtml.css">
-  </head>
-  <body>
-	@await Html.PartialAsync("NavBar");
 
-	<div class="login-page">
+<head>
+  <!-- Links to include bootscrap and jquery  -->
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
+  <link rel="stylesheet" type="text/css" href="Login.cshtml.css">
+</head>
+
+<body>
+  @await Html.PartialAsync("NavBar");
+
+  <!-- Heading section -->
+  <div class="login-page">
 		<div class="heading">
 			<div class="log-in-to-grape-aid">
 				Log In to GrapeAid
@@ -21,112 +24,110 @@
 				Welcome back.
 			</div>
 		</div>
-		<form class="form"  method="post" asp-controller="Home" asp-action="Login">
+		<form class="form" method="post" asp-controller="Home" asp-action="Login">
 			<input id="email" class="email-address" type="email" placeholder="Email Address">
 
-    </input>
-    <input class="password" type="password" placeholder="Password">
+			</input>
+			<input id="password" class="password" type="password" placeholder="Password">
 
-    </input>
+			</input>
 
-				<button class="button" onclick="attemptLogin()" style="z-index:1">Login</button>
-				
-    <div class="rectangle-10">
-    </div>
-    <div class="rectangle-11">
-    </div>
-  </div>
-  <div class="sign-up-button">
-    <div class="button">
-    </div>
-  </div>
-  <div class="thin-outline">
-  </div>
-  <div class="don-t-have-an-account">
-    Don’t have an account?
-  </div>
-  <div class="log-in-button">
-    <div class="button2">
-    </div>
-    <div class="sign-up">
-      <a href="/Home/Signup">Sign Up</a>
-    </div>
-  </div>
-  <div class="line-1">
-  </div>
-</div>
+			<button class="button" onclick="attemptLogin()" style="z-index:1">Login</button>
+			<div class="rectangle-10">
+			</div>
+			<div class="rectangle-11">
+			</div>
+		</form>
+		<div class="">
+			
+		</div>
+		<div class="thin-outline">
+		</div>
+		<div class="don-t-have-an-account">
+			Don’t have an account?
+		</div>
+		<div class="sign-up-button">
+			<div class="button2">
+			</div>
+			<div class="sign-up">
+				Sign Up
+			</div>
+		</div>
+		<div class="line-1">
+		</div>
+	</div>
 
-<!-- Footer section -->
-<div class="footer">
-  <div class="footer-bg">
-  </div>
-  <div class="copyright-2024-grape-aid">
-    Copyright © 2024, GrapeAid.
-  </div>
-  <div class="ending-hunger-nourishing-communities">
-    Ending hunger, nourishing communities.
-  </div>
-  <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
-    <span>
-      <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br />
+  <!-- Footer section -->
+  <div class="footer">
+    <div class="footer-bg">
+    </div>
+    <div class="copyright-2024-grape-aid">
+      Copyright © 2024, GrapeAid.
+    </div>
+    <div class="ending-hunger-nourishing-communities">
+      Ending hunger, nourishing communities.
+    </div>
+    <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
+      <span>
+        <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br />
+        </span>
+        <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
+          <br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore</span>
       </span>
-      <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
-        <br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore</span>
-    </span>
-  </div>
-  <div class="contact-us-instagram-linkedin">
-    <span>
-      <span class="contact-us-instagram-linkedin-span">Contact us<br />
+    </div>
+    <div class="contact-us-instagram-linkedin">
+      <span>
+        <span class="contact-us-instagram-linkedin-span">Contact us<br />
+        </span>
+        <span class="contact-us-instagram-linkedin-span2">
+          <br />
+        </span>
+        <div class="contact-us-instagram-linkedin-span3">
+          <a href="https://www.youtube.com">Instagram</a><br />
+          <a href="https://www.linkedin.com/in/chloe-sacil-419844210/">Linkedin</a>
+        </div>
       </span>
-      <span class="contact-us-instagram-linkedin-span2">
-        <br />
-      </span>
-      <div class="contact-us-instagram-linkedin-span3">
-        <a href="https://www.youtube.com">Instagram</a><br />
-        <a href="https://www.linkedin.com/in/chloe-sacil-419844210/">Linkedin</a>
-      </div>
-    </span>
+    </div>
   </div>
-</div>
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="~/js/site.js" asp-append-version="true"></script>
-	<script>
-		console.log("CLICKED")
-		function attemptLogin() {
-			// Get the values entered by the user
-			var email = document.getElementById("email").value;
-			var password = document.getElementById("password").value;
+   <!-- Scripts to include bootscrap and jquery  -->
+  
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+  <script>
+    console.log("CLICKED")
+    function attemptLogin() {
+      // Get the values entered by the user
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
 
-			// Send the login credentials to the server using AJAX (Assuming you are using jQuery)
-			$.ajax({
-				url: "/Home/Login", // Replace with your server-side script or API endpoint URL
-				method: "POST",
-				data: {
-					email: email,
-					password: password
-				},
-				success: function (response) {
-					// Handle the server's response
-					if (response.success) {
-						// Login was successful
-						alert("Login successful!");
-					} else {
-						// Login failed
-						alert("Incorrect email or password. Please try again.");
-					}
-				},
-				error: function () {
-					alert("An error occurred while processing the login request.");
-				}
-			});
-		}
-	</script>
+      // Send the login credentials to the server using AJAX (Assuming you are using jQuery)
+      $.ajax({
+        url: "/Home/Login", // Replace with your server-side script or API endpoint URL
+        method: "POST",
+        data: {
+          email: email,
+          password: password
+        },
+        success: function (response) {
+          // Handle the server's response
+          if (response.success) {
+            // Login was successful
+            alert("Login successful!");
+          } else {
+            // Login failed
+            alert("Incorrect email or password. Please try again.");
+          }
+        },
+        error: function () {
+          alert("An error occurred while processing the login request.");
+        }
+      });
+    }
+  </script>
 
-  <!-- Scripts to include bootscrap and jquery  -->
-	<script src="~/lib/jquery/dist/jquery.min.js"></script>
-	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="~/js/site.js" asp-append-version="true"></script>
-  </body>
+ 
+</body>
+
 </html>
