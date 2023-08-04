@@ -12,20 +12,17 @@
   <body>
 	@await Html.PartialAsync("NavBar");
 
-<!-- Heading section -->
-<div class="login-page">
-  <div class="heading">
-    <div class="log-in-to-grape-aid">
-      Log In to GrapeAid
-    </div>
-    <div class="welcome-back">
-      Welcome back.
-    </div>
-  </div>
-
-  <!-- Form (User Inputs) section -->
-  <div class="form">
-    <input class="email-address" type="email" placeholder="Email Address">
+	<div class="login-page">
+		<div class="heading">
+			<div class="log-in-to-grape-aid">
+				Log In to GrapeAid
+			</div>
+			<div class="welcome-back">
+				Welcome back.
+			</div>
+		</div>
+		<form class="form"  method="post" asp-controller="Home" asp-action="Login">
+			<input id="email" class="email-address" type="email" placeholder="Email Address">
 
     </input>
     <input class="password" type="password" placeholder="Password">
