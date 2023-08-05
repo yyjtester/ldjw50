@@ -9,6 +9,7 @@ using System.Security.Claims;
 using System.Data;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace mvc2.Controllers;
 
@@ -28,87 +29,57 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Login()
+    public IActionResult Login(string returnUrl = null!)
     {
+        TempData["ReturnUrl"] = returnUrl;
         return View();
+    }
+
+    [Authorize]
+    public IActionResult Logoff(string returnUrl = null!)
+    {
+        HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        if (Url.IsLocalUrl(returnUrl))
+            return Redirect(returnUrl);
+        return RedirectToAction("Index", "Home");
     }
 
     [AllowAnonymous]
     [HttpPost]
     public IActionResult Login(Login user)
     {
-        if (!ModelState.IsValid)
+        
+        if (!AuthenticateUser(user.Email, user.Password))
         {
-            ViewData["Message"] = "Invalid";
-            ViewData["MsgType"] = "warning";
+            //ViewData["Message"] = DBUtl.DB_Message;
+            //ViewData["MsgType"] = "warning";
             return View("Login");
         }
         else
         {
-            string sql = @"SELECT * FROM account WHERE account_email = '{0}' AND account_password = '{1}'";
-            int res = DBUtl.ExecSQL(sql, user.Email, user.Password);
-
-            if (res == 1)
-            {
-                TempData["Message"] = "Login successful";
-                TempData["MsgType"] = "success";
-            }
-            else
-            {
-                TempData["Message"] = DBUtl.DB_Message;
-                TempData["MsgType"] = "danger";
-            }
-            return RedirectToAction("Index");
-            /*if (!AuthenticateUser(user.Email, user.Password))
-            {
-                ViewData["Message"] = "Incorrect email or password";
-                return View();
-            }
-            else
-            {
-                return View("Index");
-            }*/
+            return RedirectToAction("Index", "Home");
         }
-        
     }
-            /*//email = "yj@gmail.com";
-            //password = "djejdeo23";
-            string sql = "SELECT * FROM account WHERE account_email = '" + email + "' AND account_password = '" + password + "'";
-
-            string select = string.Format(sql, email, password);
-            DataTable ds = DBUtl.GetTable(sql);
-
-                if (ds.Rows.Count == 1)
-                {
-                    // Login successful
-                    //return Json(new { success = true });
-                    return View("Index");
-                    
-                }
-                else
-                {
-                    // Login failed
-                    //return Json(new { success = false });
-                    return View("Login");
-                    
-
-                }
-
-    }*/
-
-    
 
     private static bool AuthenticateUser(string Email, string Password)
     {
-
-        string sql = @"SELECT * FROM account WHERE account_email = '{0}' AND account_password = '{1}'";
-        string select = string.Format(sql, Email, Password);
-        DataTable ds = DBUtl.GetTable(select);
-        if (ds.Rows.Count == 1)
+        string connectionString = "server=db4free.net;database=foodaid;user=fypuser;password=d4dHF#G5g6#q;";
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
         {
-            return true;
+            connection.Open();
+
+            string sql = "SELECT COUNT(*) FROM account WHERE account_email = @Email AND account_password = @Password";
+            using (MySqlCommand command = new MySqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@Email", Email);
+                command.Parameters.AddWithValue("@Password", Password);
+
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                return count == 1;
+            }
         }
-        return false;
+        
     }
     public IActionResult LearningHub()
     {
