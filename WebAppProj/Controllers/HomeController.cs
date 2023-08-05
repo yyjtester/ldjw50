@@ -37,15 +37,39 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Login(Login user)
     {
-        if (!AuthenticateUser(user.Email, user.Password))
+        if (!ModelState.IsValid)
         {
-            ViewData["Message"] = "Incorrect email or password";
-            return View();
+            ViewData["Message"] = "Invalid";
+            ViewData["MsgType"] = "warning";
+            return View("Login");
         }
         else
         {
-            return RedirectToAction("Index", "Home");
+            string sql = @"SELECT * FROM account WHERE account_email = '{0}' AND account_password = '{1}'";
+            int res = DBUtl.ExecSQL(sql, user.Email, user.Password);
+
+            if (res == 1)
+            {
+                TempData["Message"] = "Login successful";
+                TempData["MsgType"] = "success";
+            }
+            else
+            {
+                TempData["Message"] = DBUtl.DB_Message;
+                TempData["MsgType"] = "danger";
+            }
+            return RedirectToAction("Index");
+            /*if (!AuthenticateUser(user.Email, user.Password))
+            {
+                ViewData["Message"] = "Incorrect email or password";
+                return View();
+            }
+            else
+            {
+                return View("Index");
+            }*/
         }
+        
     }
             /*//email = "yj@gmail.com";
             //password = "djejdeo23";
