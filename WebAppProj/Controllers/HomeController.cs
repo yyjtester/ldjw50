@@ -33,51 +33,59 @@ public class HomeController : Controller
         return View();
     }
 
-        [AllowAnonymous]
+    [AllowAnonymous]
     [HttpPost]
-    public IActionResult Login(string email, string password)
+    public IActionResult Login(Login user)
     {
-        // Initialize a connection string based on your appsettings configuration
-        string connectionString = _configuration.GetConnectionString("DefaultConnection");
+        if (!AuthenticateUser(user.Email, user.Password))
+        {
+            ViewData["Message"] = "Incorrect email or password";
+            return View();
+        }
+        else
+        {
+            return RedirectToAction("Index", "Home");
+        }
+    }
+            /*//email = "yj@gmail.com";
+            //password = "djejdeo23";
+            string sql = "SELECT * FROM account WHERE account_email = '" + email + "' AND account_password = '" + password + "'";
 
-        // Use a using statement to ensure proper disposal of resources
-        //using (SqlConnection connection = new SqlConnection(connectionString))
-        //{
+            string select = string.Format(sql, email, password);
+            DataTable ds = DBUtl.GetTable(sql);
 
-            // Construct the SQL query with parameters to prevent SQL injection
-            string sql = "SELECT * FROM account WHERE account_email = @Email AND account_password = @Password";
-            
-            int result = DBUtl.ExecSQL(sql, "@Email", email, "@Password", password);
-
-            //using (SqlCommand command = new SqlCommand(sql, connection))
-            //{
-                
-                //command.Parameters.AddWithValue("@Email", email);
-                //command.Parameters.AddWithValue("@Password", password);
-                
-                //connection.Open();
-
-                //using (SqlDataReader reader = command.ExecuteReader())
-                //{
-                
-                //int result = (int)command.ExecuteScalar();
-
-                if (result > 0)
+                if (ds.Rows.Count == 1)
                 {
                     // Login successful
-                    return Json(new { success = true });
+                    //return Json(new { success = true });
+                    return View("Index");
+                    
                 }
                 else
                 {
                     // Login failed
-                    return Json(new { success = false });
-                }
-                //}
-            //}
-            
-        //}
-    }
+                    //return Json(new { success = false });
+                    return View("Login");
+                    
 
+                }
+
+    }*/
+
+    
+
+    private static bool AuthenticateUser(string Email, string Password)
+    {
+
+        string sql = @"SELECT * FROM account WHERE account_email = '{0}' AND account_password = '{1}'";
+        string select = string.Format(sql, Email, Password);
+        DataTable ds = DBUtl.GetTable(select);
+        if (ds.Rows.Count == 1)
+        {
+            return true;
+        }
+        return false;
+    }
     public IActionResult LearningHub()
     {
         return View();

@@ -89,6 +89,7 @@
   position: absolute;
   left: calc(50% - 240px);
   top: 451px;
+  z-index: 1;
 }
 
 .rectangle-11 {
@@ -101,6 +102,7 @@
   position: absolute;
   left: calc(50% - 241px);
   top: 516px;
+  z-index: 1;
 }
 
 .sign-up-button {

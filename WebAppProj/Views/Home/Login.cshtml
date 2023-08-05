@@ -1,6 +1,7 @@
 <!-- For more settings use the AutoHTML plugin tab ... -->
-@model Login
+
 <!DOCTYPE html>
+@model Login
 <html>
 
 <head>
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-  @await Html.PartialAsync("NavBar");
+  @await Html.PartialAsync("NavBar")
 
   <!-- Heading section -->
   <div class="login-page">
@@ -24,19 +25,24 @@
 				Welcome back.
 			</div>
 		</div>
+     
 		<form class="form" method="post" asp-controller="Home" asp-action="Login">
-			<input id="email" class="email-address" type="email" placeholder="Email Address">
-
-			</input>
-			<input id="password" class="password" type="password" placeholder="Password">
-
-			</input>
-
-			<button class="button" onclick="attemptLogin()" style="z-index:1">Login</button>
-			<div class="rectangle-10">
+      
+      
+      <div class="email-address">
+			  <input class="email-address form-control" style="z-index:1" type="email" placeholder="Email Address" asp-for="Email">
+        <span asp-validation-for="Email"></span>
 			</div>
-			<div class="rectangle-11">
+			<!--<div class="rectangle-10">-->
+			<!--</div>-->
+			<div class="password">
+        <input class="password form-control" style="z-index:1" type="password" placeholder="Password" asp-for="Password">
+        <span asp-validation-for="Password"></span>
 			</div>
+      <div class="log-in-button">
+        <button class="button" style="z-index:1" type="submit">Login</button>
+      </div>
+      
 		</form>
 		<div class="">
 			
