@@ -1,3 +1,4 @@
+Request.cshtml
 
 <!DOCTYPE html>
 <html>
@@ -6,7 +7,10 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
     <link rel="stylesheet" type="text/css" href="Request.cshtml.css">
-    
+
+    <!-- Add a custom CSS file for the purple and green theme -->
+    <link rel="stylesheet" type="text/css" href="custom-theme.css">
+
 </head>
 <title>Food Request</title>
 <body>
@@ -18,115 +22,98 @@
             <h2>Food Request</h2>
         </div>
 
-        <!--<form method="post" action="~/Home/Request">-->
-
-            <div class="col-md-6 mb-3 form-floating">
-                <input type="text" class="form-control" id="name" name="Name"
-                       placeholder="Your name" />
-                <label for="name">Name</label>
-            </div>
-
-            <div class="col-md-6 mb-3 form-floating">
-                <input type="email" class="form-control" id="email" name="Email"
-                       placeholder="Your email" />
-                <label for="email">Email</label>
-            </div>
-
-            <div class="col-md-6 mb-3 form-floating">
-                <div class="form-control border-0 ">
-                    <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input"
-                               id="male" name="Gender" value="Male" />
-                        <label class="form-check-label" for="male">Male</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-input"
-                               id="female" name="Gender" value="Female" />
-                        <label class="form-check-label" for="female">Female</label>
-                    </div>
+        <form method="post" action="~/Home/Request">
+            <div class="row">
+                <div class="col-md-6 mb-3 form-floating">
+                    <input type="text" class="form-control" id="name" name="Name"
+                           placeholder="Your name" />
+                    <label for="name">Name</label>
                 </div>
-                <label>Gender</label>
-            </div>
 
-            <div class="col-md-6 mb-3 form-floating">
-                <div class="form-control border-0 ">
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input"
-                               id="food" name="Food" value="Food" />
-                        <label class="form-check-label" for="Food">Foods</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input"
-                               id="fruit" name="Fruit" value="Fruit" />
-                        <label class="form-check-label" for="Fruit">Fruits</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input"
-                               id="vegetables" name="Vegetables" value="Vegetables" />
-                        <label class="form-check-label" for="Vegetables">Vegetables</label>
-                    </div>
+                <div class="col-md-6 mb-3 form-floating">
+                    <input type="email" class="form-control" id="email" name="Email"
+                           placeholder="Your email" />
+                    <label for="email">Email</label>
                 </div>
-                <label>Interests</label>
             </div>
 
-            <div class="col-md-6 mb-3 form-floating">
-                <select class="form-select" id="refer" name="Refer">
-                    <option value="">-- Select One --</option>
-                    <option value="Friend">Friend</option>
-                    <option value="Magazine">Magazine</option>
-                    <option value="Newspaper">Newspaper</option>
-                    <option value="Radio">Radio</option>
-                </select>
-                <label for="email">How did you hear about us?</label>
+            <div class="row">
+                <div class="col-md-6 mb-3 form-floating">
+                    <div class="form-control border-0 ">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input"
+                                   id="male" name="Gender" value="Male" />
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input"
+                                   id="female" name="Gender" value="Female" />
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+                    <label>Gender</label>
+                </div>
+
+                <div class="col-md-6 mb-3 form-floating">
+                    <div class="form-control border-0 ">
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input"
+                                   id="food" name="Food" value="Food" />
+                            <label class="form-check-label" for="Food">Foods</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input"
+                                   id="fruit" name="Fruit" value="Fruit" />
+                            <label class="form-check-label" for="Fruit">Fruits</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input"
+                                   id="vegetables" name="Vegetables" value="Vegetables" />
+                            <label class="form-check-label" for="Vegetables">Vegetables</label>
+                        </div>
+                    </div>
+                    <label>Food type</label>
+                </div>
             </div>
 
-            <div class="col-md-6 mb-3 form-floating">
-                <textarea class="form-control" id="comments" name="Comments"
-                          style="height: 100px" placeholder="Add comments here"></textarea>
-                <label for="comments">Additional comments</label>
+            <div class="row">
+                <div class="col-md-6 mb-3 form-floating">
+                    <select class="form-select" id="refer" name="Refer">
+                        <option value="">-- Select One --</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Magazine">Magazine</option>
+                        <option value="Newspaper">Newspaper</option>
+                        <option value="Radio">Radio</option>
+                    </select>
+                    <label for="email">How did you hear about us?</label>
+                </div>
+
+                <div class="col-md-6 mb-3 form-floating">
+                    <textarea class="form-control" id="comments" name="Comments"
+                              style="height: 100px" placeholder="Add comments here"></textarea>
+                    <label for="comments">Additional comments</label>
+                </div>
             </div>
 
-            <input type="submit" class="mb-3 btn btn-primary" value="Submit Request" />
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <input type="submit" class="mb-3 btn btn-primary" value="Submit Request" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <a class="btn btn-secondary" href="~/Home/Index">Back to Main</a>
+                </div>
+            </div>
+        </form>
 
-
-            <a class="row mx-0" href="~/Home/Index">Back to Main</a>
-
-        <!--</form>-->
-        <!-- Footer section -->
-		<div class="footer">
-			<div class="footer-bg">
-			</div>
-			<div class="copyright-2024-grape-aid">
-				Copyright © 2024, GrapeAid.
-			</div>
-			<div class="ending-hunger-nourishing-communities">
-				Ending hunger, nourishing communities.
-			</div>
-			<div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
-				<span>
-					<span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br />
-					</span>
-					<span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
-						<br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore</span>
-				</span>
-			</div>
-			<div class="contact-us-instagram-linkedin">
-				<span>
-					<span class="contact-us-instagram-linkedin-span">Contact us<br />
-					</span>
-					<span class="contact-us-instagram-linkedin-span2">
-						<br />
-					</span>
-					<div class="contact-us-instagram-linkedin-span3">
-						<a href="https://www.youtube.com">Instagram</a><br />
-						<a href="https://www.linkedin.com/in/chloe-sacil-419844210/">Linkedin</a>
-					</div>
-				</span>
-			</div>
-		</div>
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-		<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="~/js/site.js" asp-append-version="true"></script>
     </div>
+
+    <!-- Footer section -->
+    <div class="footer">
+        <!-- Footer content here -->
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>
