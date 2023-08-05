@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learning Hub</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
+  <link rel="stylesheet" type="text/css" href="Login.cshtml.css">
   <style>
     /* Body Styles */
     body {
@@ -93,6 +96,7 @@
   </style>
 </head>
 <body>
+  @await Html.PartialAsync("NavBar")
 
 <!-- First Section: Chinese Tofu -->
 <div class="section-container">
