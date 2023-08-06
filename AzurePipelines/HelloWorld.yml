@@ -64,7 +64,7 @@ steps:
   inputs:
     command: 'test'
     projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
-    arguments: '--configuration $(BuildConfiguration) --logger trx --results-directory $(TestResultsDirectory)'
+    arguments: '--collect code coverage'
 
 - task: PublishTestResults@2
   displayName: 'publish test results'
