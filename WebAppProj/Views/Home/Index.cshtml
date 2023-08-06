@@ -2,11 +2,13 @@
 <html>
 
 <head>
-  <!-- Links to include bootscrap and jquery  -->
+  <!-- Links to include bootstrap, jquery, and animation script  -->
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
   <link rel="stylesheet" type="text/css" href="Index.cshtml.css">
+  <link rel="stylesheet" href="aos-by-red.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <title>Home page</title>
 
@@ -16,7 +18,7 @@
 
   <!-- Footer section -->
   <div class="landing-page-button">
-    <div class="footer">
+    <section class="footer">
       <div class="footer-bg">
       </div>
       <div class="copyright-2024-grape-aid">
@@ -27,36 +29,33 @@
       </div>
       <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
         <span>
-          <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br />
+          <span class="based-in">Based in<br />
           </span>
-          <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
+          <span class="location">
             <br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore</span>
         </span>
       </div>
       <div class="contact-us-instagram-linkedin">
         <span>
-          <span class="contact-us-instagram-linkedin-span">Contact us<br />
+          <span class="contact-us">Contact us<br />
           </span>
           <span class="contact-us-instagram-linkedin-span2">
 
           </span>
-          <div class="contact-us-instagram-linkedin-span3">
+          <div class="links">
             <a href="https://www.youtube.com">Instagram</a><br />
             <a href="https://www.linkedin.com/in/chloe-sacil-419844210/">Linkedin</a>
           </div>
         </span>
       </div>
-    </div>
-
-    
+    </section>
 
     <!-- Food Insecurity Section -->
-    <div class="let-food-insecurity-rest">
+    <section class="let-food-insecurity-rest" data-aos="fade-right">
       <div class="let-food-insecurity-rest2">
         Let Food Insecurity Rest
       </div>
-      <div
-        class="we-implement-efficient-food-distribution-networks-to-minimize-waste-and-maximize-impact-innovative-food-rescue-programs-redirect-surplus-meals-to-those-in-need-while-educational-resources-empower-communities-to-cultivate-sustainable-food-sources-we-believe-that-everyone-deserves-access-to-wholesome-meals-and-together-we-are-sowing-the-seeds-of-a-hunger-free-world-join-the-transformational-journey-today-and-help-put-food-insecurity-to-rest-for-good">
+      <div class="food-insecurity-desc">
         We implement efficient food distribution networks to minimize waste and maximize impact. Innovative food rescue
         programs redirect surplus meals to those in need, while educational resources empower communities to cultivate
         sustainable food sources. <br />
@@ -64,14 +63,13 @@
         hunger-free world. Join the transformational journey today and help put food insecurity to rest for good.
       </div>
 
-    </div>
+    </section>
 
     <!-- Connecting Hearts Section -->
-    <div class="connecting-hearts">
+    <div class="connecting-hearts" data-aos="fade-left">
       <div class="connect-hearts-bg">
       </div>
-      <div
-        class="we-are-a-vibrant-hub-that-brings-together-food-aid-organizations-generous-food-providers-and-individuals-in-need-creating-a-powerful-network-dedicated-to-fighting-hunger-and-nourishing-communities-our-website-serves-as-a-bridge-seamlessly-connecting-those-in-need-with-those-who-can-help">
+      <div class="connect-hearts-desc">
         We are a vibrant hub that brings together food aid organizations, generous food providers, and individuals in
         need, creating a powerful network dedicated to fighting hunger and nourishing communities.<br />
         <br />Our website serves as a bridge, seamlessly connecting those in need with those who can help.
@@ -81,10 +79,8 @@
       </div>
     </div>
 
-
-
     <!-- Giving You Great Aid Section -->
-    <div class="giving-you-great-aid">
+    <section class="giving-you-great-aid">
       <div class="learn-more-button">
         <div class="button">
         </div>
@@ -98,13 +94,23 @@
           <span class="giving-you-great-aid-2-span2">great aid.</span>
         </span>
       </div>
-      <div
-        class="a-centralized-safe-space-to-bridge-the-gap-between-surplus-food-resources-and-those-in-need-be-part-of-the-community">
+      <div class="great-aid-desc">
         A centralized, safe space to bridge the gap between surplus food resources and those in need.<br />
         <br />Be part of the community.<br />
       </div>
-    </div>
+    </section>
   </div>
+
+
+<!-- Script for Section Animations -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 3000,
+      once: true,
+      mirror: true,
+    });
+  </script>
 
   <!-- Scripts to include bootscrap and jquery  -->
   <script src="~/lib/jquery/dist/jquery.min.js"></script>

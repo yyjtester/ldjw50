@@ -4,6 +4,7 @@
   box-sizing: border-box;
   top: 20px;
 }
+
 .landing-page-button {
   background: #ffffff;
   width: 1440px;
@@ -55,13 +56,13 @@
   top: 2815px;
 }
 
-.based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span {
+.based-in {
   color: #000000;
 
   font: 300 32px "Sora", sans-serif;
 }
 
-.based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2 {
+.location {
   color: #000000;
 
   font: 300 24px "Sora", sans-serif;
@@ -75,7 +76,7 @@
   top: 2815px;
 }
 
-.contact-us-instagram-linkedin-span {
+.contact-us {
   color: #000000;
 
   font: 300 32px "Sora", sans-serif;
@@ -87,7 +88,7 @@
   font: 300 24px "Sora", sans-serif;
 }
 
-.contact-us-instagram-linkedin-span3 {
+.links {
   color: #000000;
   position: relative;
   z-index: 1;
@@ -114,7 +115,7 @@
   justify-content: center;
 }
 
-.we-implement-efficient-food-distribution-networks-to-minimize-waste-and-maximize-impact-innovative-food-rescue-programs-redirect-surplus-meals-to-those-in-need-while-educational-resources-empower-communities-to-cultivate-sustainable-food-sources-we-believe-that-everyone-deserves-access-to-wholesome-meals-and-together-we-are-sowing-the-seeds-of-a-hunger-free-world-join-the-transformational-journey-today-and-help-put-food-insecurity-to-rest-for-good {
+.food-insecurity-desc {
   color: #000000;
   text-align: center;
   font: 300 32px/44px "Inter", sans-serif;
@@ -140,7 +141,7 @@
   top: 849px;
 }
 
-.we-are-a-vibrant-hub-that-brings-together-food-aid-organizations-generous-food-providers-and-individuals-in-need-creating-a-powerful-network-dedicated-to-fighting-hunger-and-nourishing-communities-our-website-serves-as-a-bridge-seamlessly-connecting-those-in-need-with-those-who-can-help {
+.connect-hearts-desc {
   color: #000000;
   text-align: center;
   font: 300 32px/44px "Inter", sans-serif;
@@ -165,6 +166,8 @@
 .giving-you-great-aid {
   position: absolute;
   inset: 0;
+  opacity: 0;
+  animation: fadeInText 1s ease-in-out forwards;
 }
 
 .learn-more-button {
@@ -227,7 +230,7 @@
   font: 700 65px/20px "Inter", sans-serif;
 }
 
-.a-centralized-safe-space-to-bridge-the-gap-between-surplus-food-resources-and-those-in-need-be-part-of-the-community {
+.great-aid-desc {
   color: #000000;
   text-align: center;
   font: 300 30px/35px "Inter", sans-serif;
@@ -241,15 +244,8 @@
   justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
