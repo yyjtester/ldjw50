@@ -1,7 +1,10 @@
+connection.cshtml
+
 <!DOCTYPE html>
 <html>
+
 <head>
-  
+
   <title>Connections</title>
   <!-- Stylesheets -->
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
@@ -10,6 +13,7 @@
   <link rel="stylesheet" href="Consnections.cshtml.css">
   <link rel="stylesheet" href="style.css"> <!-- Custom styles -->
 </head>
+
 <body>
   <!-- Navigation Bar (Assuming this is the NavBar partial view) -->
   @await Html.PartialAsync("NavBar")
@@ -70,36 +74,43 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-bg"></div>
-    <div class="footer-content">
-      <div class="copyright">
-        © 2024, GrapeAid.
-      </div>
-      <div class="ending-hunger">
-        Ending hunger, nourishing communities.
-      </div>
-      <div class="based-in">
-        Based in<br>
-        9 Woodlands Ave 9, Singapore 738964<br>
-        Singapore, Singapore
-      </div>
-      <div class="contact-us">
-        Contact us<br>
-        <span class="contact-info">Instagram<br>Linkedin</span>
-      </div>
+  <!-- Footer section -->
+  <div class="footer">
+    <div class="footer-bg">
     </div>
-  </footer>
+    <div class="copyright-2024-grape-aid">
+      Copyright © 2024, GrapeAid.
+    </div>
+    <div class="ending-hunger-nourishing-communities">
+      Ending hunger, nourishing communities.
+    </div>
+    <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
+      <span>
+        <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br />
+        </span>
+        <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
+          <br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore</span>
+      </span>
+    </div>
+    <div class="contact-us-instagram-linkedin">
+      <span>
+        <span class="contact-us-instagram-linkedin-span">Contact us<br />
+        </span>
+        <span class="contact-us-instagram-linkedin-span2">
 
-  <!-- Optional: If you have a signup image -->
-  <div class="signup-img-bg"></div>
-  <div class="rectangle-8"></div>
-  <img class="signup-img" src="signup-img.png" alt="Signup Image">
+        </span>
+        <div class="contact-us-instagram-linkedin-span3">
+          <a href="https://www.youtube.com">Instagram</a><br />
+          <a href="https://www.linkedin.com/in/chloe-sacil-419844210/">Linkedin</a>
+        </div>
+      </span>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
+
 </html>
