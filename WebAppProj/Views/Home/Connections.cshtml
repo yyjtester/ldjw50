@@ -1,110 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" type="text/css" href="Connections.cshtml.css">
-  </head>
+<head>
+  
   <title>Connections</title>
-  <body>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+  <link rel="stylesheet" href="~/mvc2.styles.css" asp-append-version="true">
+  <link rel="stylesheet" href="Consnections.cshtml.css">
+  <link rel="stylesheet" href="style.css"> <!-- Custom styles -->
+</head>
+<body>
+  <!-- Navigation Bar (Assuming this is the NavBar partial view) -->
   @await Html.PartialAsync("NavBar")
 
-<!-- For more settings use the AutoHTML plugin tab ... --> 
- <div class="sign-up" >
-  	<div class="already-have-an-account" >
-Already have an account? 
-</div>
-  	<div class="heading" >
-    		<div class="welcome-to-grape-aid" >
-Welcome to GrapeAid. 
-</div>
-    		<div class="get-started-with-us" >
-Get started with us.  
-</div>
-  	</div>
-  	<div class="form" >
-    		<div class="footer" >
-      			<div class="footer-bg" >
-      			</div>
-      			<div class="copyright-2024-grape-aid" >
-Copyright © 2024, GrapeAid. 
-</div>
-      			<div class="ending-hunger-nourishing-communities" >
-Ending hunger, nourishing communities. 
-</div>
-      			<div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore" >
-        				<span>
-          					<span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br/>
-        				</span>
-        				<span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
-          					<br/>9 Woodlands Ave 9, Singapore 738964<br/>Singapore, Singapore</span>
-        				</span>
-      			</div>
-      			<div class="contact-us-instagram-linkedin" >
-        				<span>
-          					<span class="contact-us-instagram-linkedin-span">Contact us<br/>
-        				</span>
-        				<span class="contact-us-instagram-linkedin-span2">
-          					<br/>
-        				</span>
-        				<span class="contact-us-instagram-linkedin-span3">Instagram<br/>Linkedin<br/>
-      			</span>
-    		</span>
-  	</div>
-</div>
-<div class="first-name" >
-First Name 
-</div>
-<div class="email-address" >
-Email Address 
-</div>
-<div class="password" >
-Password 
-</div>
-<div class="repeat-password" >
-Repeat Password 
-</div>
-<div class="last-name" >
-Last Name 
-</div>
-<div class="first-name-rect" >
-</div>
-<div class="last-name-rect" >
-</div>
-<div class="email-rect" >
-</div>
-<div class="pass-rect" >
-</div>
-<div class="r-pass-rect" >
-</div>
-</div>
-<div class="sign-up-button" >
-  	<div class="button" >
-  	</div>
-  	<div class="sign-up2" >
-Sign Up 
-</div>
-</div>
-<div class="log-in-button" >
-  	<div class="button2" >
-  	</div>
-  	<div class="log-in" >
-Log In 
-</div>
-</div>
-<div class="line-1" >
-</div>
-<div class="signup-img-bg" >
-</div>
-<div class="rectangle-8" >
-</div>
-<img class="signup-img" src="signup-img.png" />
-</div>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="sign-up">
+      <div class="already-have-an-account">
+        Already have an account?
+      </div>
+      <div class="heading">
+        <div class="welcome-to-grape-aid">
+          Welcome to GrapeAid.
+        </div>
+        <div class="get-started-with-us">
+          Get started with us.
+        </div>
+      </div>
+      <div class="form">
+        <!-- Form inputs -->
+        <div class="input-group">
+          <label for="first-name" class="input-label">First Name</label>
+          <input type="text" id="first-name" class="input-field" placeholder="Enter your first name">
+          <div class="input-rect"></div>
+        </div>
+        <div class="input-group">
+          <label for="last-name" class="input-label">Last Name</label>
+          <input type="text" id="last-name" class="input-field" placeholder="Enter your last name">
+          <div class="input-rect"></div>
+        </div>
+        <div class="input-group">
+          <label for="email" class="input-label">Email Address</label>
+          <input type="email" id="email" class="input-field" placeholder="Enter your email address">
+          <div class="input-rect"></div>
+        </div>
+        <div class="input-group">
+          <label for="password" class="input-label">Password</label>
+          <input type="password" id="password" class="input-field" placeholder="Enter your password">
+          <div class="input-rect"></div>
+        </div>
+        <div class="input-group">
+          <label for="repeat-password" class="input-label">Repeat Password</label>
+          <input type="password" id="repeat-password" class="input-field" placeholder="Repeat your password">
+          <div class="input-rect"></div>
+        </div>
+        <!-- Sign Up and Log In buttons -->
+        <div class="button-group">
+          <button class="sign-up-button">
+            <div class="button"></div>
+            <div class="sign-up2">Sign Up</div>
+          </button>
+          <button class="log-in-button">
+            <div class="button2"></div>
+            <div class="log-in">Log In</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-  </body>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bg"></div>
+    <div class="footer-content">
+      <div class="copyright">
+        © 2024, GrapeAid.
+      </div>
+      <div class="ending-hunger">
+        Ending hunger, nourishing communities.
+      </div>
+      <div class="based-in">
+        Based in<br>
+        9 Woodlands Ave 9, Singapore 738964<br>
+        Singapore, Singapore
+      </div>
+      <div class="contact-us">
+        Contact us<br>
+        <span class="contact-info">Instagram<br>Linkedin</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional: If you have a signup image -->
+  <div class="signup-img-bg"></div>
+  <div class="rectangle-8"></div>
+  <img class="signup-img" src="signup-img.png" alt="Signup Image">
+
+  <!-- Scripts -->
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
 </html>
-
