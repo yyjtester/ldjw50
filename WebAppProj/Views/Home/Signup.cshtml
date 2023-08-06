@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+@model Signup
 <html>
   <head>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -10,21 +11,20 @@
   <body>
   @await Html.PartialAsync("NavBar")
 
-<!-- Header -->
-<div class="sign-up">
-  <div class="already-have-an-account">
-    Already have an account?
-  </div>
-  <div class="heading">
-    <div class="welcome-to-grape-aid">
-      Welcome to GrapeAid.
+  <!-- Header -->
+  <div class="sign-up">
+    <div class="already-have-an-account">
+      Already have an account?
     </div>
-    <div class="get-started-with-us">
-      Get started with us.
+    <div class="heading">
+      <div class="welcome-to-grape-aid">
+        Welcome to GrapeAid.
+      </div>
+      <div class="get-started-with-us">
+        Get started with us.
+      </div>
     </div>
-
     <!-- Footer -->
-  </div>
   <div class="form">
     <div class="footer">
       <div class="footer-bg">
@@ -59,23 +59,35 @@
     </div>
 
     <!-- Form (Sign Up) -->
-    <div class="form">
-      <input class="first-name" type="first-name" placeholder="First Name">
+    <form class="form" method="post" asp-controller="Home" asp-action="Signup">
+      
+      <div class="first-name form-control">
+        <input class="first-name" style="z-index:1" type="first-name" placeholder="First Name" asp-for="FirstName">
+        <span asp-validation-for="FirstName"></span>
+      </div>
 
-      </input>
-      <input class="email-address" type="email" placeholder="Email Address">
+      <div class="email-address form-control">
+        <input class="email-address" style="z-index:1" type="email" placeholder="Email Address" asp-for="Email">
+        <span asp-validation-for="Email"></span>
+      </div>
 
-      </input>
-      <input class="password" type="password" placeholder="Password">
+      <div class="password form-control">
+        <input class="password" style="z-index:1" type="password" placeholder="Password" asp-for="Password">
+        <span asp-validation-for="Password"></span>
+      </div>
 
-      </input>
-      <input class="repeat-password" type="password" placeholder="Repeat Password">
+      <div class="repeat-password form-control">
+        <input class="repeat-password" style="z-index:1" type="password" placeholder="Repeat Password" asp-for="Repeat">
+        <span asp-validation-for="Repeat"></span>
+      </div>
 
-      </input>
-      <input class="last-name" type="last-name" placeholder="Last Name">
-
-      </input>
-      <div class="first-name-rect">
+      <div class="last-name form-control">
+        <input class="last-name" style="z-index:1" type="last-name" placeholder="Last Name" asp-for="LastName">
+        <span asp-validation-for="LastName"></span>
+      </div>
+      
+    
+      <!--<div class="first-name-rect">
       </div>
       <div class="last-name-rect">
       </div>
@@ -84,26 +96,26 @@
       <div class="pass-rect">
       </div>
       <div class="r-pass-rect">
-      </div>
+      </div>-->
+
+    <div class="radio-group">
+      <label>
+        <input type="radio" value="donator" name="radioButton" asp-for="UserRole">Donator
+        <span asp-validation-for="UserRole"></span>
+      </label>
+      <label>
+        <input type="radio" class="requestor" value="requestor" name="radioButton" asp-for="UserRole">Requestor
+        <span asp-validation-for="UserRole"></span>
+      </label>
     </div>
-  </div>
-  <div class="radio-group">
-    <label>
-      <input type="radio" value="donator" name="radioButton">Donator
-      <span></span>
-    </label>
-    <label>
-      <input type="radio" class="requestor" value="requestor" name="radioButton">Requestor
-      <span></span>
-    </label>
-  </div>
-  <div class="sign-up-button">
-    <div class="button">
+
+    <div class="sign-up-button">
+      <button class="sign-up2" style="z-index:1" type="submit">Sign Up</button>
     </div>
-    <div class="sign-up2">
-      Sign Up
-    </div>
+
+    </form>
   </div>
+  
   <div class="log-in-button">
     <div class="button2">
     </div>

@@ -238,6 +238,7 @@
   position: absolute;
   left: calc(50% - -59px);
   top: 394px;
+  z-index: 1;
 }
 
 .last-name-rect {
@@ -250,6 +251,7 @@
   position: absolute;
   left: calc(50% - -327px);
   top: 394px;
+  z-index: 1;
 }
 
 .email-rect {
@@ -262,6 +264,7 @@
   position: absolute;
   left: calc(50% - -59px);
   top: 458px;
+  z-index: 1;
 }
 
 .pass-rect {
@@ -274,6 +277,7 @@
   position: absolute;
   left: calc(50% - -58px);
   top: 523px;
+  z-index: 1;
 }
 
 .r-pass-rect {
@@ -286,6 +290,7 @@
   position: absolute;
   left: calc(50% - -58px);
   top: 587px;
+  z-index: 1;
 }
 
 .sign-up-button {
@@ -309,7 +314,9 @@
   color: #ffffff;
   text-align: center;
   font: 300 24px/35px "Inter", sans-serif;
+  background: #17c470;
   position: absolute;
+  border-radius: 74px;
   left: calc(50% - -105.32px);
   top: calc(50% - 86.22px);
   width: 412.35px;

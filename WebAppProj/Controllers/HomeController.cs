@@ -35,14 +35,21 @@ public class HomeController : Controller
         return View();
     }
 
-    [Authorize]
+/*    [Authorize]
     public IActionResult Logoff(string returnUrl = null!)
     {
         HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         if (Url.IsLocalUrl(returnUrl))
             return Redirect(returnUrl);
         return RedirectToAction("Index", "Home");
-    }
+    }*/
+
+    /*[AllowAnonymous]
+    [HttpPost]
+    public IActionResult Signup(Signup user)
+    {
+        if (user.)
+    }*/
 
     [AllowAnonymous]
     [HttpPost]
@@ -58,6 +65,29 @@ public class HomeController : Controller
         else
         {
             return RedirectToAction("Index", "Home");
+        }
+    }
+
+    private static bool CreateUser(string FirstName, string LastName, string Email, string Password, string UserRole)
+    {
+        string connectionString = "server=db4free.net;database=foodaid;user=fypuser;password=d4dHF#G5g6#q;";
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
+        {
+            connection.Open();
+
+            string sql = "INSERT INTO account(account_name, account_email, first_name, last_name, user_role, account_password) VALUES(@LastName, @Email, @FirstName, @LastName, @UserRole, @Password);";
+            using (MySqlCommand command = new MySqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@LastName", LastName);
+                command.Parameters.AddWithValue("@FirstName", FirstName);
+                command.Parameters.AddWithValue("@Email", Email);
+                command.Parameters.AddWithValue("@Password", Password);
+                command.Parameters.AddWithValue("@UserRole", UserRole);
+
+                int count = Convert.ToInt32(command.ExecuteScalar());
+
+                return count == 1;
+            }
         }
     }
 
