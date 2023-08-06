@@ -41,6 +41,7 @@ steps:
   displayName: 'restore'
   inputs:
     command: 'restore'
+    arguments: '--version 5.8.1'
     projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
     feedsToUse: 'select'
 
