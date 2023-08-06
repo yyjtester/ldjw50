@@ -111,13 +111,19 @@
 
 
  /* Already have an account section styles */
-.already-have-account {
+.table-background-donation {
    padding: 20px;
    background-color: rgba(140, 82, 255, 0.62);
    border-radius: 5px;
    margin-bottom: 30px;
  }
  
+ .table-background-request {
+  padding: 20px;
+  background-color: #17c470;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
  .welcome-text {
    font-size: 24px;
    font-weight: bold;
@@ -142,14 +148,4 @@
    margin-right: 10px;
  }
  
- .btn-primary {
-   color: #fff;
-   background-color: #8c52ff;
-   border-color: #ffffff;
-}
 
-.btn-secondary {
-   color: #fff;
-   background-color: #17c470;
-   border-color: #ffffff;
-}
