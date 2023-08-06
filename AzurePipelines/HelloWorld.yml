@@ -63,13 +63,14 @@ steps:
   inputs:
     command: 'test'
     projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
-    arguments: '--collect "Code Coverage"'
+    arguments: '--configuration $(BuildConfiguration) --logger trx --results-directory $(TestResultsDirectory)'
 
 - task: PublishTestResults@2
   displayName: 'publish test results'
   inputs:
     testResultsFormat: 'VSTest'
-    testResultsFiles: '/workspaces/mvc2/WebAppProj/TestResults/*.xml'
+    testResultsFiles: '/workspaces/mvc2/WebAppProj/TestResults/*.trx'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
     mergeTestResults: true
 
 - task: SonarCloudAnalyze@1
