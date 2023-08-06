@@ -33,7 +33,7 @@ steps:
 - task: UseDotNet@2
   displayName: 'Install .NET Core SDK'
   inputs:
-    version: 4.x
+    version: 6.x
     performMultiLevelLookup: true
     includePreviewVersions: true # Required for preview versions
 
@@ -64,7 +64,7 @@ steps:
   inputs:
     command: 'test'
     projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
-    arguments: '--configuration $(BuildConfiguration) --logger trx --results-directory $(TestResultsDirectory)'
+    arguments: '--collect code coverage'
 
 - task: PublishTestResults@2
   displayName: 'publish test results'
