@@ -44,13 +44,65 @@ public class HomeController : Controller
         return RedirectToAction("Index", "Home");
     }*/
 
-    /*[AllowAnonymous]
+    [AllowAnonymous]
     [HttpPost]
     public IActionResult Signup(Signup user)
     {
-        if (user.)
-    }*/
+        string connectionString = "server=db4free.net;database=foodaid;user=fypuser;password=d4dHF#G5g6#q;";
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
+        {
+            connection.Open();
+            //string userRole = user.UserRole;
+            if (user.Repeat == user.Password)
+            {
+                /*if (userRole == "donator")
+                {*/
+                    string sql = "INSERT INTO account(account_name, account_email, first_name, last_name, user_role, account_password) VALUES(@LastName, @Email, @FirstName, @LastName, 'donator', @Password);";
+                    using (MySqlCommand command = new MySqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@LastName", user.LastName);
+                        command.Parameters.AddWithValue("@FirstName", user.FirstName);
+                        command.Parameters.AddWithValue("@Email", user.Email);
+                        command.Parameters.AddWithValue("@Password", user.Password);
+                        //command.Parameters.AddWithValue("@UserRole", user.UserRole);
 
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+
+                        if (count == 1)
+                        {
+                            return RedirectToAction("Login", "Home");
+                        }
+                        else 
+                        {
+                            return View("Signup");
+                        }
+                    }
+                    
+                /*}*/
+                    
+
+            }
+            return View("Login");
+
+            
+        }
+    }
+
+        /*if (user.Repeat == user.Password)
+        {
+            if (!CreateUser(user.FirstName, user.LastName, user.Email, user.Password, user.UserRole))
+            {
+                return View("Signup");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+        }
+        return View("Signup");*/
+    
+
+    // Login action
     [AllowAnonymous]
     [HttpPost]
     public IActionResult Login(Login user)
@@ -58,8 +110,8 @@ public class HomeController : Controller
         
         if (!AuthenticateUser(user.Email, user.Password))
         {
-            //ViewData["Message"] = DBUtl.DB_Message;
-            //ViewData["MsgType"] = "warning";
+            ViewData["Message"] = "Incorrect email or Password";
+            ViewData["MsgType"] = "warning";
             return View("Login");
         }
         else
@@ -68,12 +120,14 @@ public class HomeController : Controller
         }
     }
 
-    private static bool CreateUser(string FirstName, string LastName, string Email, string Password, string UserRole)
+    /*private static bool CreateUser(string FirstName, string LastName, string Email, string Password, string UserRole)
     {
         string connectionString = "server=db4free.net;database=foodaid;user=fypuser;password=d4dHF#G5g6#q;";
         using (MySqlConnection connection = new MySqlConnection(connectionString))
         {
             connection.Open();
+
+            if ()
 
             string sql = "INSERT INTO account(account_name, account_email, first_name, last_name, user_role, account_password) VALUES(@LastName, @Email, @FirstName, @LastName, @UserRole, @Password);";
             using (MySqlCommand command = new MySqlCommand(sql, connection))
@@ -89,8 +143,9 @@ public class HomeController : Controller
                 return count == 1;
             }
         }
-    }
+    }*/
 
+    // Login authentication
     private static bool AuthenticateUser(string Email, string Password)
     {
         string connectionString = "server=db4free.net;database=foodaid;user=fypuser;password=d4dHF#G5g6#q;";

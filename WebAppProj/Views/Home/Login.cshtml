@@ -37,9 +37,10 @@
 			<!--<div class="rectangle-10">-->
 			<!--</div>-->
 			<div class="password">
-        <input class="password form-control" style="z-index:1" type="password" placeholder="Password" asp-for="Password"> <!-- Password Input -->
-        <span asp-validation-for="Password"></span> <!-- Password Validation Message -->
-			</div> 
+        <input class="password form-control" style="z-index:1" type="password" placeholder="Password" asp-for="Password">
+        <span asp-validation-for="Password" class="text-danger"></span> 
+			</div>
+
       <div class="log-in-button">
         <button class="button" style="z-index:1" type="submit">Login</button>
       </div>
