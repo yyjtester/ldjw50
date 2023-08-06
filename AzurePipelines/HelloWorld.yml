@@ -65,6 +65,13 @@ steps:
     projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
     arguments: '--collect "Code Coverage"'
 
+- task: PublishTestResults@2
+  displayName: 'publish test results'
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '/workspaces/mvc2/WebAppProj/TestResults/*.xml'
+    mergeTestResults: true
+
 - task: SonarCloudAnalyze@1
 
 - task: SonarCloudPublish@1
