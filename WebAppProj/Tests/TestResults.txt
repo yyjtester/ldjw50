@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="unique-id" name="Test run name" runUser="username" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Results>
+    <!-- Test results for individual test cases go here -->
+  </Results>
+  <!-- Additional elements for test run data -->
+</TestRun>
