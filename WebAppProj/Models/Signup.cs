@@ -21,7 +21,7 @@ public class Signup
     [Required(ErrorMessage = "Please re-enter Password")]
     [DataType(DataType.Password)]
     public string Repeat { get; set; } = null!;
-
+    
     public string UserRole { get; set; } = null!;
 
 }
