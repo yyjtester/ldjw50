@@ -340,6 +340,12 @@ input[type="radio"]{
   margin: 0 15px 0 15px;
 }
 
+.text-danger {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 label {
   color: #000000;
   text-align: center;
