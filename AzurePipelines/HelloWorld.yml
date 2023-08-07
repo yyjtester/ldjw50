@@ -69,7 +69,7 @@ steps:
   displayName: 'publish test results'
   inputs:
     testResultsFormat: 'VSTest'
-    testResultsFiles: '/workspaces/mvc2/WebAppProj/TestResults/*.trx'
+    testResultsFiles: '/workspaces/mvc2/WebAppProj/Tests/TestResults.trx'
     searchFolder: '$(System.DefaultWorkingDirectory)'
     mergeTestResults: true
 
