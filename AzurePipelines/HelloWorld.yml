@@ -64,12 +64,13 @@ steps:
   inputs:
     command: 'test'
     projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
+    arguments: --configuration $(buildConfiguration) --collect:"XPlat Code Coverage" --logger trx
 
 - task: PublishTestResults@2
   displayName: 'publish test results'
   inputs:
     testResultsFormat: 'VSTest'
-    testResultsFiles: '/workspaces/mvc2/WebAppProj/TestResults/*.trx'
+    testResultsFiles: '/workspaces/mvc2/WebAppProj/Tests/TestResults.trx'
     searchFolder: '$(System.DefaultWorkingDirectory)'
     mergeTestResults: true
 
