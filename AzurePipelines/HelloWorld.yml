@@ -65,13 +65,13 @@ steps:
     command: 'test'
     projects: '/workspaces/mvc2/WebAppProj/mvc2.csproj'
 
-#- task: PublishTestResults@2
-#  displayName: 'publish test results'
-#  inputs:
-#    testResultsFormat: 'VSTest'
-#    testResultsFiles: '/workspaces/mvc2/WebAppProj/TestResults/*.trx'
-#    searchFolder: '$(System.DefaultWorkingDirectory)'
-#    mergeTestResults: true
+- task: PublishTestResults@2
+  displayName: 'publish test results'
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '/workspaces/mvc2/WebAppProj/TestResults/*.trx'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    mergeTestResults: true
 
 - task: SonarCloudAnalyze@1
 
