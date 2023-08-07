@@ -35,15 +35,7 @@ public class HomeController : Controller
         return View();
     }
 
-/*    [Authorize]
-    public IActionResult Logoff(string returnUrl = null!)
-    {
-        HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        if (Url.IsLocalUrl(returnUrl))
-            return Redirect(returnUrl);
-        return RedirectToAction("Index", "Home");
-    }*/
-
+    // Signup action
     [AllowAnonymous]
     [HttpPost]
     public IActionResult Signup(Signup user)
@@ -52,19 +44,25 @@ public class HomeController : Controller
         using (MySqlConnection connection = new MySqlConnection(connectionString))
         {
             connection.Open();
-            //string userRole = user.UserRole;
-            if (user.Repeat == user.Password)
+            if(!ModelState.IsValid)
             {
-                /*if (userRole == "donator")
-                {*/
-                    string sql = "INSERT INTO account(account_name, account_email, first_name, last_name, user_role, account_password) VALUES(@LastName, @Email, @FirstName, @LastName, 'donator', @Password);";
+                return View("Signup");
+            }
+            else
+            {
+
+            
+                string userRole = user.UserRole;
+                if (user.Repeat == user.Password)
+                {
+                    string sql = "INSERT INTO account(account_name, account_email, first_name, last_name, user_role, account_password) VALUES(@LastName, @Email, @FirstName, @LastName, @UserRole, @Password);";
                     using (MySqlCommand command = new MySqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@LastName", user.LastName);
                         command.Parameters.AddWithValue("@FirstName", user.FirstName);
                         command.Parameters.AddWithValue("@Email", user.Email);
                         command.Parameters.AddWithValue("@Password", user.Password);
-                        //command.Parameters.AddWithValue("@UserRole", user.UserRole);
+                        command.Parameters.AddWithValue("@UserRole", user.UserRole);
 
                         int count = Convert.ToInt32(command.ExecuteScalar());
 
@@ -72,35 +70,16 @@ public class HomeController : Controller
                         {
                             return RedirectToAction("Login", "Home");
                         }
-                        else 
-                        {
-                            return View("Signup");
-                        }
+
                     }
-                    
-                /*}*/
-                    
-
+                        
+                }    
+                
             }
-            return View("Login");
 
-            
         }
+        return RedirectToAction("Login", "Home");
     }
-
-        /*if (user.Repeat == user.Password)
-        {
-            if (!CreateUser(user.FirstName, user.LastName, user.Email, user.Password, user.UserRole))
-            {
-                return View("Signup");
-            }
-            else
-            {
-                return RedirectToAction("Login", "Home");
-            }
-        }
-        return View("Signup");*/
-    
 
     // Login action
     [AllowAnonymous]
@@ -110,8 +89,8 @@ public class HomeController : Controller
         
         if (!AuthenticateUser(user.Email, user.Password))
         {
-            ViewData["Message"] = "Incorrect email or Password";
-            ViewData["MsgType"] = "warning";
+            //ViewData["Message"] = "Incorrect email or Password";
+            //ViewData["MsgType"] = "warning";
             return View("Login");
         }
         else
@@ -119,31 +98,6 @@ public class HomeController : Controller
             return RedirectToAction("Index", "Home");
         }
     }
-
-    /*private static bool CreateUser(string FirstName, string LastName, string Email, string Password, string UserRole)
-    {
-        string connectionString = "server=db4free.net;database=foodaid;user=fypuser;password=d4dHF#G5g6#q;";
-        using (MySqlConnection connection = new MySqlConnection(connectionString))
-        {
-            connection.Open();
-
-            if ()
-
-            string sql = "INSERT INTO account(account_name, account_email, first_name, last_name, user_role, account_password) VALUES(@LastName, @Email, @FirstName, @LastName, @UserRole, @Password);";
-            using (MySqlCommand command = new MySqlCommand(sql, connection))
-            {
-                command.Parameters.AddWithValue("@LastName", LastName);
-                command.Parameters.AddWithValue("@FirstName", FirstName);
-                command.Parameters.AddWithValue("@Email", Email);
-                command.Parameters.AddWithValue("@Password", Password);
-                command.Parameters.AddWithValue("@UserRole", UserRole);
-
-                int count = Convert.ToInt32(command.ExecuteScalar());
-
-                return count == 1;
-            }
-        }
-    }*/
 
     // Login authentication
     private static bool AuthenticateUser(string Email, string Password)

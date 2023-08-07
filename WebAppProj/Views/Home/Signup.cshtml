@@ -63,40 +63,38 @@
       
       <div class="first-name form-control">
         <input class="first-name" style="z-index:1" type="first-name" placeholder="First Name" asp-for="FirstName"> <!-- First Name Input -->
-        <span asp-validation-for="FirstName"></span> <!-- First Name Validation Message -->
+        <span asp-validation-for="FirstName" class="text-danger"></span> <!-- First Name Validation Message -->
       </div>
 
       <div class="email-address form-control">
         <input class="email-address" style="z-index:1" type="email" placeholder="Email Address" asp-for="Email"> <!-- Email Input -->
-        <span asp-validation-for="Email"></span> <!-- Email Validation Message -->
+        <span asp-validation-for="Email" class="text-danger"></span> <!-- Email Validation Message -->
       </div>
 
       <div class="password form-control">
         <input class="password" style="z-index:1" type="password" placeholder="Password" asp-for="Password"> <!-- Password Input -->
-        <span asp-validation-for="Password"></span> <!-- Password Validation Message -->
+        <span asp-validation-for="Password" class="text-danger"></span> <!-- Password Validation Message -->
       </div>
 
       <div class="repeat-password form-control">
         <input class="repeat-password" style="z-index:1" type="password" placeholder="Repeat Password" asp-for="Repeat"> <!-- Password Repeat Input -->
-        <span asp-validation-for="Repeat"></span> <!-- Password Repeat Validation Message -->
+        <span asp-validation-for="Repeat" class="text-danger"></span> <!-- Password Repeat Validation Message -->
       </div>
 
       <div class="last-name form-control">
         <input class="last-name" style="z-index:1" type="last-name" placeholder="Last Name" asp-for="LastName"> <!-- Last Name Input -->
-        <span asp-validation-for="LastName"></span> <!-- Last Name Validation Message -->
+        <span asp-validation-for="LastName" class="text-danger"></span> <!-- Last Name Validation Message -->
       </div>
       
- <!--  <div class="radio-group">
-      <label>
-        <input class="donator" type="radio" value="donator" name="radioButton" asp-for="UserRole">Donator
-        <span asp-validation-for="UserRole"></span>
+      <div class="radio-group">
+      <label asp-for="UserRole">
+        <div>
+        <input class="donator" type="radio" value="donator" name="UserRole">Donator
+        <input class="requestor" type="radio" value="requestor" name="UserRole">Requestor
+        </div>
       </label>
-      <label>
-        <input class="requestor" type="radio" value="requestor" name="radioButton" asp-for="UserRole">Requestor
-        <span asp-validation-for="UserRole"></span>
-      </label>
-
-    </div>-->
+      <span asp-validation-for="UserRole" class="text-danger"></span>
+    </div>
 
     <div class="sign-up-button">
       <button class="sign-up2" style="z-index:1" type="submit">Sign Up</button>
