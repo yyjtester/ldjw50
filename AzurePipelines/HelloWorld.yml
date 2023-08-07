@@ -86,10 +86,10 @@ steps:
     artifactName: 'drop'
     targetPath: '$(Pipeline.Workspace)/drop'
 
-- task: WhiteSource@21
-  displayName: 'Run Mend Bolt'
-  inputs:
-    cwd: '$(System.DefaultWorkingDirectory)'
+#- task: WhiteSource@21
+#  displayName: 'Run Mend Bolt'
+#  inputs:
+#    cwd: '$(System.DefaultWorkingDirectory)'
 
 #- task: WhiteSource@21
 #  inputs:
