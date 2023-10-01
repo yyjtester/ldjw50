@@ -1,0 +1,8 @@
+:root {
+    --text-font-family: "VarelaRound-Regular", Helvetica;
+    --text-font-weight: 400;
+    --text-font-size: 20px;
+    --text-letter-spacing: 0px;
+    --text-line-height: normal;
+    --text-font-style: normal;
+}

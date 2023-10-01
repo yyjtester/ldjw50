@@ -17,125 +17,69 @@
 
   <!-- Heading section -->
   <div class="login-page">
-		<div class="heading">
-			<div class="log-in-to-grape-aid">
-				Log In to GrapeAid
-			</div>
-			<div class="welcome-back">
-				Welcome back.
-			</div>
-		</div>
-     
-    <!-- Login form -->
-		<form class="form" method="post" asp-controller="Home" asp-action="Login">
-      
-      
-      <div class="email-address">
-			  <input class="email-address form-control" style="z-index:1" type="email" placeholder="Email Address" asp-for="Email"> <!-- Email Input -->
-        <span asp-validation-for="Email"></span> <!-- Email Validation Message -->
-			</div>
-			<!--<div class="rectangle-10">-->
-			<!--</div>-->
-			<div class="password">
-        <input class="password form-control" style="z-index:1" type="password" placeholder="Password" asp-for="Password">
-        <span asp-validation-for="Password"></span> 
-			</div>
-
-      <div class="log-in-button">
-        <button class="button" style="z-index:1" type="submit">Login</button>
-      </div>
-      
-		</form>
-		<div class="">
-			
-		</div>
-		<div class="thin-outline">
-		</div>
-		<div class="don-t-have-an-account">
-			Don’t have an account?
-		</div>
-		<div class="sign-up-button">
-			<div class="button2">
-			</div>
-			<div class="sign-up">
-<a href="/Home/Signup">Sign Up</a>
-			</div>
-		</div>
-		<div class="line-1">
-		</div>
-	</div>
-
-  <!-- Footer section -->
-  <div class="footer">
+    <div class="footer-bg-top">
+    </div>
     <div class="footer-bg">
-    </div>
-    <div class="copyright-2024-grape-aid">
-      Copyright © 2024, GrapeAid.
-    </div>
-    <div class="ending-hunger-nourishing-communities">
-      Ending hunger, nourishing communities.
-    </div>
-    <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
-      <span>
-        <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br />
-        </span>
-        <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
-          <br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore</span>
-      </span>
-    </div>
-    <div class="contact-us-instagram-linkedin">
-      <span>
-        <span class="contact-us-instagram-linkedin-span">Contact us<br />
-        </span>
-        <span class="contact-us-instagram-linkedin-span2">
-          <br />
-        </span>
-        <div class="contact-us-instagram-linkedin-span3">
-          <a href="https://www.instagram.com">Instagram</a><br />
-          <a href="https://www.linkedin.com/in/chloe-sacil-419844210/">Linkedin</a>
+      </div>
+    <div class="heading">
+      <div class="log-in-to-grape-aid">
+        <br />Work Experience: <br />
+        <div class="first-job-experience">
+          <br /><br />1.
         </div>
-      </span>
+        <div class="second-job-experience">
+          2.
+        </div>
+        <div class="third-job-experience">
+          3.
+        </div>
+        <div class="forth-job-experience">
+          4.
+        </div>
+      </div>
+
+    <!-- Footer section -->
+    <div class="footer">
+      
+      <div class="footer-bg-bottom">
+      </div>
+      <div class="copyright-2024-grape-aid">
+        Copyright © 2024, GrapeAid.
+      </div>
+      <div class="ending-hunger-nourishing-communities">
+        Thanks for viewing
+      </div>
+      <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
+        <span>
+          <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in<br />
+          </span>
+          <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
+            <br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore</span>
+        </span>
+      </div>
+      <div class="contact-us-instagram-linkedin">
+        <span>
+          <span class="contact-us-instagram-linkedin-span">Contact us<br />
+          </span>
+          <span class="contact-us-instagram-linkedin-span2">
+            <br />
+          </span>
+          <div class="contact-us-instagram-linkedin-span3">
+            <a href="https://www.instagram.com">Instagram</a><br />
+            <a href="https://www.linkedin.com/in/chloe-sacil-419844210/">Linkedin</a>
+          </div>
+        </span>
+
+      </div>
+
     </div>
-  </div>
 
-   <!-- Scripts to include bootscrap and jquery  -->
-  
-  <script src="~/lib/jquery/dist/jquery.min.js"></script>
-  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="~/js/site.js" asp-append-version="true"></script>
-  <script>
-    console.log("CLICKED")
-    function attemptLogin() {
-      // Get the values entered by the user
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
+    <!-- Scripts to include bootscrap and jquery  -->
 
-      // Send the login credentials to the server using AJAX (Assuming you are using jQuery)
-      $.ajax({
-        url: "/Home/Login", // Replace with your server-side script or API endpoint URL
-        method: "POST",
-        data: {
-          email: email,
-          password: password
-        },
-        success: function (response) {
-          // Handle the server's response
-          if (response.success) {
-            // Login was successful
-            alert("Login successful!");
-          } else {
-            // Login failed
-            alert("Incorrect email or password. Please try again.");
-          }
-        },
-        error: function () {
-          alert("An error occurred while processing the login request.");
-        }
-      });
-    }
-  </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 
- 
 </body>
 
 </html>

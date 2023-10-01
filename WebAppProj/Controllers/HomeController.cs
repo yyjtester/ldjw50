@@ -136,7 +136,7 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Donations_D()
+    public IActionResult Skill()
     {
         return View();
     }
