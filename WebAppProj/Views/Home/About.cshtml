@@ -3,6 +3,9 @@
 <html>
 
 <head>
+  <title>About</title>
+
+  <!-- Other links and scripts go here -->
   <!-- Links to include bootscrap and jquery  -->
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -10,10 +13,11 @@
   <link rel="stylesheet" type="text/css" href="About.cshtml.css">
   <link rel="stylesheet" href="aos-by-red.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="script.js"></script>
 </head>
-<title>About</title>
 
-<body>
+
+<body style="background-color: #FEFFDF;">
   @await Html.PartialAsync("NavBar")
 
   <!-- About Us Page -->
@@ -21,91 +25,80 @@
     <!-- Footer section -->
     <div class="landing-page-button">
       <div class="footer">
+        <div class="footer-bg-top">
+        </div>
         <div class="footer-bg">
         </div>
+        <div class="centered-content">
+        
+        <!-- Add more centered-text elements for other text as needed -->
+        </div>
         <div class="name">
-          Name: Yong Yung Jian
+        Name: Yong Yung Jian
         </div>
-        <div class="ending-hunger-nourishing-communities">
-          Contact Number:
+        <div class="cn">
+        Contact Number:
         </div>
-        <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
-          <span>
-            <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span">Based in
-            <span class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore-span2">
-              <br />9 Woodlands Ave 9, Singapore 738964<br />Singapore, Singapore 738282</span>
-          </span>
-        </div>
-        <div class="contact-us-instagram-linkedin">
-          <span>
-            <span class="contact-us-instagram-linkedin-span"><br /> Contact me:<br />
-            </span>
-            <span class="contact-us-instagram-linkedin-span2">
-
-            </span>
-            <div class="contact-us-instagram-linkedin-span3">
-              <a href="https://www.instagram.com">Instagram</a><br />
-              <a href="https://www.linkedin.com/">Linkedin</a>
+        
+        <!-- Middle Section -->
+        <div class="trio" data-aos="fade-right">
+          <div class="about-us">
+            <div class="connect-hearts-bg">
             </div>
-          </span>
-        </div>
-      </div>
+            <div class="middle-section">
+              <span>
+                <span class="user-registration"><br />Internship: <br />
+                </span>
+                <span class="surplus">Changcheng Head Quater<br />Start Date: 18 September 2023<br />End date 4 February
+                  2024<br />Location:
+                  <br />
+                  <br />
+                </span>
 
-      <!-- Third Paragraph -->
-      <div class="accomplished" data-aos="fade-left">
-        <br />Extra
-      </div>
+                <span class="ns">National Service: <br />
+                </span>
 
-      <!-- Middle Section -->
-      <div class="trio" data-aos="fade-right">
-        <div class="about-us">
-          <div class="connect-hearts-bg">
-          </div>
-          <div class="middle-section">
-            <span>
-              <span class="user-registration"><br />Internship: <br />
+                <span class="startenddate">Start Date: <br /> End Date: <br />
+                  <br />
+                  <br />
+                </span>
+                <span class="hobby">Hobby: <br />1. Cycling<br />2. Coding<br />3. Fix and modify items
+                  like
+                  bike light<br />
+                </span>
+                <span class="fp">Future Planing</span>
               </span>
-              <span class="surplus">Changcheng Head Quater<br />Start Date: 18 September 2023<br />End date 4 February 2024<br />Location: 
-                <br />
-                <br />
-              </span>
-              
-              <span class="food-listings">National Service: <br />
-              </span>
-              
-              <span class="available">Start Date: <br /> End Date: <br />
-                <br />
-                <br />
-              </span>
-              <span class="food-request-system">Hobby: <br />1. Cycling<br />2. Coding<br />3. Fix and modify items like bike light<br />
-              </span>
-              <span class="assistance">Future Planing</span>
-            </span>
+            </div>
           </div>
         </div>
+
+          <!-- First Paragraph -->
+          <div class="aim" data-aos="fade-in">
+            The web application project is aimed at promoting and facilitates sustainable food aid called
+            “GrapeAid&quot;.
+            <br />
+            <br />Its goal is to address social responsibility and food sustainability by connecting food providers,
+            such
+            as restaurants, grocery stores, and farms, with organizations and individuals in need of food assistance.
+            The
+            project emphasizes sustainability by reducing food waste and promoting the use of locally sourced and
+            environmentally friendly food options.
+          </div>
+        
       </div>
 
-      <!-- About Us Heading -->
-      <div class="about-us-heading">
-        <div class="about-us-text" data-aos="fade-in">
-          About Us
-        </div>
-
-        <!-- First Paragraph -->
-        <div class="aim" data-aos="fade-in">
-          The web application project is aimed at promoting and facilitates sustainable food aid called “GrapeAid&quot;. <br />
-          <br />Its goal is to address social responsibility and food sustainability by connecting food providers, such as restaurants, grocery stores, and farms, with organizations and individuals in need of food assistance. The project emphasizes sustainability by reducing food waste and promoting the use of locally sourced and environmentally friendly food options.
-        </div>
-      </div>
     </div>
-    
-    @*
-    <div class="footer-bg-bottom">
+
+
+    <!-- Footer section -->
+    <div class="footer">
+      
+      <div class="footer-bg-bottom">
       </div>
       <div class="copyright-2024-grape-aid">
         Copyright © 2024, GrapeAid.
       </div>
-      <div class="ending-hunger-nourishing-communities">
+      <div class="thanks">
         Thanks for viewing
       </div>
       <div class="based-in-9-woodlands-ave-9-singapore-738964-singapore-singapore">
@@ -130,7 +123,9 @@
         </span>
 
       </div>
-      *@
+
+    </div>
+
     <!-- Script for Section Animations -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <body>
+<head>
+    <style>
+        .nav-bar .button-header {
+            font-size: 18px; /* You can adjust the font size as needed */
+        }
+    </style>
+</head>
+<body>
 
-	  <!-- Navigation Bar section  -->
+	<!-- Navigation Bar section  -->
 	<nav class="nav-bar">
-	  <a href="/Home/Index" class="Logo">
-		<img class="grapeaidlogo" src="~/images/grapeaidlogo.jpg" />   <!-- Grape Aid Logo image showcase  -->
-	  </a>
-	  <ul class="button-panel">
-		<li class="button">
-		  <a href="/Home/Index" class="button-header">Home</a>   <!-- Button to redirect to Home page  -->
-		</li>
-		<li class="button">
-		  <a href="/Home/Connections" class="button-header">Description</a> <!-- Button to redirect to Connections page  -->
-		  <ul class="dropdown">
-			<li><a href="/Home/Skill">Skill</a></li>
-			<li><a href="/Home/Request">Project</a></li>
-			
-		  </ul> 
-		</li>
-		<li class="button">
-		  <a href="/Home/LearningHub" class="button-header">Certificate</a> <!-- Button to redirect to Contact page  -->
-		</li>
+		<a href="/Home/Index" class="Logo">
+			<img class="pflogo" src="~/images/portfolio logo v2.png" width=250px height=115px />
+			<!-- Grape Aid Logo image showcase  -->
+		</a>
+		<ul class="button-panel">
+			<li class="button">
+				<a href="/Home/Index" class="button-header">Home</a> <!-- Button to redirect to Home page  -->
+			</li>
+			<li class="button">
+				<a href="/Home/Descriptions" class="button-header">Description</a>
+				<!-- Button to redirect to Connections page  -->
+				<ul class="dropdown">
+					<li><a href="/Home/Skill">Skill</a></li>
+					<li><a href="/Home/Project">Project</a></li>
 
-		<li class="button">
-		  <a href="/Home/About" class="button-header">About</a> <!-- Button to redirect to About page  -->
-		</li>
-		<li class="button3">
-		  <a href="/Home/Login" class="button-header2">Job</a> <!-- Button to redirect to Log in page  -->
-		</li>
+				</ul>
+			</li>
+			<li class="button">
+				<a href="/Home/Certificates" class="button-header">Certificate</a>
+				<!-- Button to redirect to Contact page  -->
+			</li>
 
-	  </ul>
+			<li class="button">
+				<a href="/Home/About" class="button-header">About</a> <!-- Button to redirect to About page  -->
+			</li>
+			<li class="button">
+				<a href="/Home/Jobs" class="button-header">Job</a> <!-- Button to redirect to Log in page  -->
+			</li>
+
+		</ul>
 	</nav>
-  </body>
-</html>
+</body>
 
+</html>

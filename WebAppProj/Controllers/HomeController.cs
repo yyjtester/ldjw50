@@ -120,11 +120,11 @@ public class HomeController : Controller
         }
         
     }
-    public IActionResult LearningHub()
+    public IActionResult Certificates()
     {
         return View();
     }
-    public IActionResult Connections()
+    public IActionResult Descriptions()
     {
         return View();
     }
@@ -141,7 +141,12 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Request()
+    public IActionResult Project()
+    {
+        return View();
+    }
+
+    public IActionResult Jobs()
     {
         return View();
     }

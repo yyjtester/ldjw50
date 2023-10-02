@@ -1,3 +1,8 @@
+
+.background {
+  background: #FCFFB8;
+}
+
 .landing-page-button,
 .landing-page-button * {
   margin: auto;
@@ -19,13 +24,14 @@
 }
 
 .footer-bg {
-  background: rgba(140, 82, 255, 0.62);
+  background: #FEE576;
   border-radius: 45px;
   width: 1654px;
   height: 543px;
   position: absolute;
   left: -81px;
   top: 2652px;
+  border-radius: 20px; /* Adjust the value to control the roundness of the corners */
 }
 
 .copyright-2024-grape-aid {
@@ -132,13 +138,14 @@
 }
 
 .connect-hearts-bg {
-  background: rgba(140, 82, 255, 0.62);
+  background: #FEE576;
   border-radius: 45px;
   width: 1654px;
   height: 758px;
   position: absolute;
   left: -36px;
   top: 849px;
+  border-radius: 20px; /* Adjust the value to control the roundness of the corners */
 }
 
 .connect-hearts-desc {
@@ -164,10 +171,12 @@
 }
 
 .giving-you-great-aid {
+  color:#FCFFBD;
   position: absolute;
   inset: 0;
   opacity: 0;
   animation: fadeInText 1s ease-in-out forwards;
+ 
 }
 
 .learn-more-button {
@@ -177,8 +186,8 @@
 }
 
 .button {
-  background: #8c52ff;
-  border-radius: 74px;
+  background: #FEE576;
+  border-radius: 10px;
   width: 173.08px;
   height: 53.91px;
   position: absolute;

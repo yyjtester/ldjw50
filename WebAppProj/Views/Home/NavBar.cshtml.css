@@ -6,12 +6,14 @@
 
 /* Style the navbar container */
 .nav-bar {
-  background: #ffffff;
+  background: #A0FF84;
   width: 1440px;
   height: 131px;
   position: relative;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
+  overflow: hidden;/* This property ensures that content does not overflow rounded corners */
+  border-radius: 20px; /* Adjust the value to control the roundness of the corners */
+  
 }
 
 /* Style the logo */
@@ -55,7 +57,7 @@
 
 .nav-bar ul li a:hover{
   color: white;
-  background-color: #8c52ff;
+  background-color: #FEE576;
   background-size: contain;
   border-radius: 5px;
 }
@@ -68,7 +70,7 @@
   width: 105px;
   display: none;
   position: absolute;
-  background-color: #8c52ff;
+  background-color:#FEE576;
   border-radius: 8px;
 }
 
@@ -77,7 +79,7 @@
 }
 
 .nav-bar li:hover > ul {
-  color: #8c52ff;
+  color: #FEE576;
   display: block;
   position: absolute;
 }
@@ -93,16 +95,37 @@
 
 /* Specific style for the login button */
 .button3 {
-  background: #8c52ff;
+  background: #A0FF84;
   border-radius: 5px;
 }
 
 /* Style login button text */
 .button-header2 {
-  color: #ffffff;
+  
   text-align: left;
   font: 500 14px/20px "Inter", sans-serif; /* Updated font-family to "Inter" */
   text-transform: uppercase;
   position: relative;
 }
 
+
+
+/* Apply a cute font */
+.nav-bar a {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Add some color to the text */
+.nav-bar a {
+  color: #24730D 
+}
+
+/* Add hover effect */
+.nav-bar a:hover {
+  color: #24730D 
+}
+
+/* Add a subtle animation */
+.nav-bar a {
+  transition: color 0.3s ease-in-out;
+}

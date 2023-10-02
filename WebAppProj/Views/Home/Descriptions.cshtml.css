@@ -6,13 +6,13 @@ html, body, div, p {
 
 /* Apply a background color and font styles */
 body {
-  background-color: #f2f2f2;
+  background-color: #FEE576;
   font-family: Arial, sans-serif;
 }
 
 /* Style the navbar */
 .navbar {
-  background-color: #333;
+  background-color: #C7FF33;
   color: #fff;
   padding: 10px;
 }
@@ -41,6 +41,7 @@ body {
   margin-top: 20px;
 }
 
+
 .header .p {
   font-size: 18px;
   margin-top: 20px;
@@ -59,7 +60,7 @@ body {
 
 /* Style the skills section */
 .skills {
-  background-color: #fff;
+  background-color: #FEFFDF;
   padding: 50px 0;
 }
 
@@ -90,7 +91,7 @@ body {
 
 /* Style the projects section */
 .projects {
-  background-color: #f2f2f2;
+  background-color: #FEFFDF;
   padding: 50px 0;
 }
 
@@ -185,3 +186,164 @@ body {
   font-weight: bold;
   margin-top: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ff5733;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background-color: #333;
+    top: 70px;
+    left: 0;
+    text-align: center;
+  }
+
+  .nav-active a {
+    margin: 10px 0;
+  }
+
+  .menu-toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.header {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.group-3,
+.group-4,
+.div-wrapper {
+  transition: all 0.3s ease;
+}
+
+.group-3:hover,
+.group-4:hover,
+.div-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  opacity: 0;
+  animation: fadeIn 1s forwards 1.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ff5733;
+}
+

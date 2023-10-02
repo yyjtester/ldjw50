@@ -59,6 +59,7 @@
 .heading {
   position: absolute;
   inset: 0;
+  border-radius: 20px; /* Adjust the value to control the roundness of the corners */
 }
 
 .log-in-to-grape-aid {
@@ -243,37 +244,41 @@
   box-sizing: border-box;
   }
 .footer {
- width: 1440px;
+ width: 1450px;
   height: 417px;
   position: relative;
   left: 714px;
+  border-radius: 20px; /* Adjust the value to control the roundness of the corners */
  }
 
  .footer-bg-top {
-  background: rgba(140, 82, 255, 0.62);
-   width: 1550px;
+  background: #FEE576;
+   width: 1450px;
    height: 417px;
    position: absolute;
-   
-  top: 0px;
+   left: -5px;
+   border-radius: 20px; /* Adjust the value to control the roundness of the corners */ 
+  top: 10px;
   }
 
 .footer-bg {
- background: rgba(140, 82, 255, 0.62);
-  width: 15500px;
+ background: #FEE576;
+  width: 1450px;
   height: 417px;
   position: absolute;
-  left: -715px;
+  left: -5px;
+  border-radius: 20px; /* Adjust the value to control the roundness of the corners */
  top: 830px;
  }
 
 
  .footer-bg-bottom {
-  background: rgba(140, 82, 255, 0.62);
-   width: 15500px;
+  background: #FEE576;
+   width: 1450px;
    height: 417px;
    position: absolute;
-   left: -715px;
+   left: -719px;
+   border-radius: 20px; /* Adjust the value to control the roundness of the corners */
   top: 1650px;
   }
 
@@ -293,7 +298,7 @@
   text-align: center;
   font: 600 36px 'Sora', sans-serif;
   position: absolute;
-  left: -188px;
+  left: -170px;
  top: 1700px;
  }
 

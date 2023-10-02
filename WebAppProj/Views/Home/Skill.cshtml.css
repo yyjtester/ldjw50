@@ -10,30 +10,32 @@
  }
 
  .footer-bg-top {
-  background: rgba(140, 82, 255, 0.62);
+  background: #FEE576;
    width: 1550px;
    height: 417px;
    position: absolute;
-   
+   border-radius: 20px; /* Adjust the value to control the roundness of the corners */
   top: 0px;
   }
 
 .footer-bg {
- background: rgba(140, 82, 255, 0.62);
-  width: 15500px;
+ background: #FEE576;
+  width: 1450px;
   height: 417px;
   position: absolute;
   left: -715px;
+  border-radius: 20px; /* Adjust the value to control the roundness of the corners */
  top: 830px;
  }
 
 
  .footer-bg-bottom {
-  background: rgba(140, 82, 255, 0.62);
-   width: 15500px;
+  background: #FEE576;
+   width: 1450px;
    height: 417px;
    position: absolute;
    left: -715px;
+   border-radius: 20px; /* Adjust the value to control the roundness of the corners */
   top: 1650px;
   }
 
